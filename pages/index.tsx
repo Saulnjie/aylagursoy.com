@@ -9,15 +9,16 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div className='main-container'>
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <pre>{JSON.stringify(products, null, 2)}</pre>
-      <p>THIS IS A TEXT</p>
+        <main className="flex min-h-screen flex-col items-center justify-center py-2">
+        <pre>{JSON.stringify(products, null, 2)}</pre>
+        <header>This is head/nav</header>
       <Image 
       src={mainImage}
       height={400}
       width={500}/>
-    </div>
-    </div>
+      <footer>This is Foot</footer>
+      </main>
+      </div>
   )
 }
 
@@ -35,4 +36,8 @@ export async function getStaticProps() {
     },
   }
 }
+// const allProducts = products.map((products) =>
+// <p>{products}</p>);
+
+
 

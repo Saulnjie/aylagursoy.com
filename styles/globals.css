@@ -21,6 +21,12 @@ a {
 
 .main-container {
     display: flex;
-    max-width: 100%;
+    width: 100%;
+    /* background-color:aquamarine; */
     height: 100%;
 }
+
+li {
+  list-style:circle ;
+}
+
