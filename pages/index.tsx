@@ -16,6 +16,8 @@ export default function Home({
       src={mainImage}
       height={400}
       width={500}/>
+      <h1 className='text-2xl	text-zinc-900 font-bold font-light'>Bergen based designer. <br/>
+Works in varius fields of design with focus on the meeting <br/>between form, materials and humans.</h1>
       <footer>This is Foot</footer>
       </main>
       </div>
