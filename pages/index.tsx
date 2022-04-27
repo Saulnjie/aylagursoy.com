@@ -12,19 +12,22 @@ export default function Home({
   console.log(findStrapiElementById(products, 2))
   return (
     <div className='main-container'>
+      <div className='hero-image-container w-3/6'>
+        <Image 
+        src={mainImage}
+        alt="Hero image"
+      height="1000px"
+      width="1000px"
+      layout="responsive" />
+      </div>
         <main className="flex min-h-screen flex-col items-center justify-center py-2">
         {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
         {/* <pre>{findArrayElementById(products, 1)}</pre> */}
-
         <header>This is head/nav</header>
-      <Image 
-      src={mainImage}
-      height={400}
-      width={500}/>
       <h1 className='text-2xl	text-zinc-900 font-bold font-light'>Bergen based designer. <br/>
-Works in varius fields of design with focus on the meeting <br/>between form, materials and humans.</h1>
-      <p>{products[1].attributes.description}</p>
-
+      Works in varius fields of design with focus on the meeting <br/>between form, materials and humans.</h1>
+      <p className='flex-1 w-2/3' >{products[1].attributes.description}</p>
+      
       <footer>This is Foot</footer>
       </main>
       </div>
