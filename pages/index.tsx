@@ -2,15 +2,20 @@ import type { InferGetStaticPropsType } from 'next'
 import { ProductsResponse } from '../types/products-response'
 import Image from 'next/image'
 import mainImage from '../public/img/mainbanner.jpg'
+import findStrapiElementById from './utils/strapiutil'
+
 
 
 export default function Home({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  console.log(findStrapiElementById(products, 2))
   return (
     <div className='main-container'>
         <main className="flex min-h-screen flex-col items-center justify-center py-2">
-        <pre>{JSON.stringify(products, null, 2)}</pre>
+        {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
+        {/* <pre>{findArrayElementById(products, 1)}</pre> */}
+
         <header>This is head/nav</header>
       <Image 
       src={mainImage}
@@ -18,6 +23,8 @@ export default function Home({
       width={500}/>
       <h1 className='text-2xl	text-zinc-900 font-bold font-light'>Bergen based designer. <br/>
 Works in varius fields of design with focus on the meeting <br/>between form, materials and humans.</h1>
+      <p>{products[1].attributes.description}</p>
+
       <footer>This is Foot</footer>
       </main>
       </div>
@@ -38,6 +45,16 @@ export async function getStaticProps() {
     },
   }
 }
+
+
+// function findArrayElementById(products, id) {
+//   console.log(products)
+//   return products.find((element) => {
+//     return element.id === id;
+//   })
+// }
+
+
 // const allProducts = products.map((products) =>
 // <p>{products}</p>);
 
