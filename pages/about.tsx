@@ -2,14 +2,17 @@ import type { InferGetStaticPropsType } from 'next'
 import { ProductsResponse } from '../types/products-response'
 import Image from 'next/image'
 import aboutimage from '../public/img/aboutprofile.jpg'
+import findStrapiElementById from './utils/strapiutil'
 
 export default function Home({
-    products,
-  }: InferGetStaticPropsType<typeof getStaticProps>) {
+  products,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  console.log(findStrapiElementById(products, 2))
     return (
-        <div className='main-container'>
-        <main className="flex min-h-screen flex-col items-center justify-center py-2">
-        <pre>{JSON.stringify(products, null, 2)}</pre>
+        <div className='main-about-container flex-row'>
+        <main className="flex min-h-screen  py-2">
+        <div className='left-about-container flex-col w-3/6'>
+        {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
         <header>This is head/nav</header>
         <h1 className='text-2xl	text-zinc-900 font-bold'>About</h1>
         <p className='about-paragraph text-base text-zinc-600'>Furniture designer based in Bergen.
@@ -58,26 +61,28 @@ designers.
 </li>
     <li>Master in Design - KMD university in Bergen (current)</li>
 </ul>
-     
+</div>
 
-        <div className='right-about-container'>
+
+        <div className='right-about-container flex-col w-3/6'>
         <Image 
         src={aboutimage}
         height={600}
-        width={450}
+        width={450} 
         
         />
 
         <p className='contact-paragraph text-base text-zinc-600'>For any questions or inquiries, please do not hesitate to contact me through social media or by email.</p>
         <h3 className='text-xl text-zinc-900 font-bold'>Contact</h3>
-        <div className='icon-container text-zinc-600'>
-        <p className='icon-text text-sm'>me@aylagursoy.com </p>
-        <p className='icon-text text-xs'>+47 950 36 921</p>
-        <p className='icon-text text-sm'>@aylagursoy</p>
+        <div className='icon-container text-zinc-600 flex-row'>
+        <p className='icon-text text-sm w-1/3'>me@aylagursoy.com </p>
+        <p className='icon-text text-xs w-1/3'>+47 950 36 921</p>
+        <p className='icon-text text-sm w-1/3'>@aylagursoy</p>
         </div>
         </div>
-      <footer>This is Foot</footer>
       </main>
+      
+      <footer>This is Foot</footer>
       </div>
     )
   }

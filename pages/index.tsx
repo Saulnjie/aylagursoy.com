@@ -16,9 +16,8 @@ export default function Home({
         <Image 
         src={mainImage}
         alt="Hero image"
-      height="1000px"
-      width="1000px"
-      layout="responsive" />
+      height="1600"
+      width="2400"/>
       </div>
         <main className="flex min-h-screen flex-col items-center justify-center py-2">
         {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
