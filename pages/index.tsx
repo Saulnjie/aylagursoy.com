@@ -2,6 +2,7 @@ import type { InferGetStaticPropsType } from 'next'
 import { ProductsResponse } from '../types/products-response'
 import Image from 'next/image'
 import mainImage from '../public/img/mainbanner.jpg'
+import aboutimage from '../public/img/aboutprofile.jpg'
 import findStrapiElementById from './utils/strapiutil'
 
 
@@ -9,15 +10,12 @@ import findStrapiElementById from './utils/strapiutil'
 export default function Home({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log(findStrapiElementById(products, 2))
+  // console.log(findStrapiElementById(products, 2))
   return (
-    <div className='main-container'>
-      <div className='hero-image-container w-3/6'>
-        <Image 
-        src={mainImage}
-        alt="Hero image"
-      height="1600"
-      width="2400"/>
+    <body>
+    <div className='main-container flex-col' >
+      <div className='hero-image-container w-6/6'>
+      <Image src={mainImage} alt="Hero image" width={500} height={500} quality={100}/>
       </div>
         <main className="flex min-h-screen flex-col items-center justify-center py-2">
         {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
@@ -30,6 +28,7 @@ export default function Home({
       <footer>This is Foot</footer>
       </main>
       </div>
+      </body>
   )
 }
 
