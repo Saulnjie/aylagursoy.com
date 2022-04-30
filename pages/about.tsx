@@ -3,6 +3,7 @@ import { ProductsResponse } from '../types/products-response'
 import Image from 'next/image'
 import aboutimage from '../public/img/aboutprofile.jpg'
 import findStrapiElementById from './utils/strapiutil'
+import Nav from './components/navigation/navigation'
 
 export default function Home({
   products,
@@ -10,10 +11,10 @@ export default function Home({
   console.log(findStrapiElementById(products, 2))
     return (
         <div className='main-about-container flex-row'>
+        <header><Nav/></header>
         <main className="flex min-h-screen  py-2">
         <div className='left-about-container flex-col w-3/6'>
         {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
-        <header>This is head/nav</header>
         <h1 className='text-2xl	text-zinc-900 font-bold'>About</h1>
         <p className='about-paragraph text-base text-zinc-600'>Furniture designer based in Bergen.
 Ayla focuses on the meeting between form, materials and humans, and she is driven by her curiosity and

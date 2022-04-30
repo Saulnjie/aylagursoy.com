@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './index/index.css';
+@import './navigation/index.css';
+
+
 html,
 body {
   padding: 0;
@@ -19,12 +23,6 @@ a {
   box-sizing: border-box;
 }
 
-.main-container {
-    display: flex;
-    width: 100%;
-    /* background-color:aquamarine; */
-    height: 100%;
-}
 
 li {
   list-style:circle ;
