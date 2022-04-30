@@ -4,6 +4,8 @@
 
 @import './index/index.css';
 @import './navigation/index.css';
+@import './about/index.css';
+@import './work/index.css';
 
 
 html,

@@ -14,10 +14,8 @@ export default function Home({
   // console.log(findStrapiElementById(products, 2))
   return (
     <body>
+      <div className='hero-image-container'>
     <div className='main-container flex-col' >
-      <div className='hero-image-container w-6/6'>
-      {/* <Image src={mainImage} alt="Hero image" width={500} height={500} quality={100}/> */}
-      </div>
         <main className="flex min-h-screen flex-col items-center justify-center py-2">
         {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
         {/* <pre>{findArrayElementById(products, 1)}</pre> */}
@@ -28,6 +26,7 @@ export default function Home({
       
       <footer>This is Foot</footer>
       </main>
+      </div>
       </div>
       </body>
   )

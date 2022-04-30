@@ -10,7 +10,7 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   console.log(findStrapiElementById(products, 2))
     return (
-        <div className='main-about-container flex-row'>
+        <div className='main-about-container'>
         <header><Nav/></header>
         <main className="flex min-h-screen  py-2">
         <div className='left-about-container flex-col w-3/6'>

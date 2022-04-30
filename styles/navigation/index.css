@@ -1,7 +1,6 @@
 
 .navigation {
     width: 100%;
-
     margin: auto;
     min-height: 50px;
     height: fit-content;
@@ -26,11 +25,11 @@
     font-size: 1.2rem;
     
 }
-.cart_nav {
+/* .cart_nav {
     color: var(--secondary-color);
     padding-right: 2rem;
     margin: 0.4rem;
-}
+} */
 
 .nav_section_container {
     display: flex;

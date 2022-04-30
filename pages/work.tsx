@@ -9,7 +9,8 @@ export default function Home({
     products,
   }: InferGetStaticPropsType<typeof getStaticProps>) {
     return (
-        <div className='main-container w-max flex-col'>
+      <div className='fullwidth-container'>
+        <div className='main-container flex-col'>
             {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
         <main className="flex min-h-screen flex-col items-center justify-center py-2 ">
         <header className='w-max'><Nav/></header>
@@ -41,6 +42,7 @@ export default function Home({
         </div>
       <footer>This is Foot</footer>
       </main>
+      </div>
       </div>
   )
 }

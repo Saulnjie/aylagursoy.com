@@ -1,0 +1,11 @@
+.main-about-container {
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+    height: 100%; 
+    margin: auto;
+} 
+
+.icon-container {
+    display: flex;
+}
