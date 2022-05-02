@@ -10,10 +10,12 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   // console.log(findStrapiElementById(products, 2))
     return (
-        <div className='main-about-container'>
+      <div className='fullscreen-container py-2'>
+        <div className='main-container'>
         <header><Nav/></header>
+        <div className='main-about-container'>
         <main className="flex min-h-screen  py-2">
-        <div className='left-about-container flex-col w-3/6'>
+        <div className='left-about-container flex-col'>
         {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
         <h1 className='text-2xl	text-zinc-900 font-bold'>About</h1>
         <p className='about-paragraph text-base text-zinc-600'>Furniture designer based in Bergen.
@@ -31,8 +33,8 @@ She is working in different fields within design. Interior stylist at Heem Berge
 studio and her vision for it, and also establishing Ytre Studio together with two other Bergen based
 designers.
 </p>
-<h2 className='text-2xl	text-zinc-900 font-bold'>Exhibitions</h2>
-<ul className='text-base text-zinc-600'>
+<h2 className='about-sub-title text-2xl	text-zinc-900 font-bold'>Exhibitions</h2>
+<ul className='about-ul-container text-base text-zinc-600'>
     <li>Bergen interior and designfair 2018
 </li>
     <li>Stockholm furniture fair 2018
@@ -49,8 +51,8 @@ designers.
     <li>Akvariet Bergen 2020
 </li>
 </ul>
-<h2 className='text-2xl	text-zinc-900 font-bold'>Other</h2>
-<ul className='text-base text-zinc-600'>
+<h2 className='about-sub-title text-2xl	text-zinc-900 font-bold'>Other</h2>
+<ul className='about-ul-container text-base text-zinc-600'>
     <li>Internship at Anderssen and Voll 2018
  </li>
     <li>Bachelor in furniture and spatial design/interior architecture
@@ -65,25 +67,28 @@ designers.
 </div>
 
 
-        <div className='right-about-container flex-col w-3/6'>
+        <div className='right-about-container flex-col'>
         <Image 
         src={aboutimage}
-        height={600}
-        width={450} 
-        
+        // height={600}
+        // width={450} 
         />
-
+        <div className='contact-container'>
         <p className='contact-paragraph text-base text-zinc-600'>For any questions or inquiries, please do not hesitate to contact me through social media or by email.</p>
         <h3 className='text-xl text-zinc-900 font-bold'>Contact</h3>
         <div className='icon-container text-zinc-600 flex-row'>
-        <p className='icon-text text-sm w-1/3'>me@aylagursoy.com </p>
-        <p className='icon-text text-xs w-1/3'>+47 950 36 921</p>
-        <p className='icon-text text-sm w-1/3'>@aylagursoy</p>
+        <p className='icon-text text-sm '>me@aylagursoy.com </p>
+        <p className='icon-text text-xs '>+47 950 36 921</p>
+        <p className='icon-text text-sm '>@aylagursoy</p>
         </div>
+        </div>
+
         </div>
       </main>
-      
       <footer>This is Foot</footer>
+      
+      </div>
+      </div>
       </div>
     )
   }

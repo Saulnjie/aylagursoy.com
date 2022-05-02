@@ -1,11 +1,44 @@
 .main-about-container {
     display: flex;
     flex-direction: column;
-    width: 66%;
+    width: 100%;
     height: 100%; 
     margin: auto;
 } 
 
+.left-about-container{
+    width: 60%;
+    height: 100%; 
+    
+}
+
+.right-about-container {
+    width: 40%;
+    height: 100%; 
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+.contact-paragraph {
+    line-height: 1.8 !important;
+}
+
 .icon-container {
     display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.about-sub-title {
+    line-height: 1.8 !important;
+}
+.about-paragraph {
+    line-height: 1.8 !important;
+}
+
+.about-ul-container {
+    line-height: 1.8 !important;
 }

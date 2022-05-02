@@ -20,11 +20,13 @@ export default function Nav() {
 			<div className='nav_container'>
 				<div className='navigation'>
 					<ul>
-						<li>
+						{/* <li>
 							<Link activeClassName='active' href='/'>
-								<a>Home</a>
+								<div className='logo_nav_container'>
+									<Image className='logo_nav' src={logo} href='/index' alt='logo' />
+								</div>
 							</Link>
-						</li>
+						</li> */}
 						<li>
 							<Link activeClassName='active' href='/about'>
 								<a>About</a>
@@ -35,20 +37,21 @@ export default function Nav() {
 								<a>Work</a>
 							</Link>
 						</li>
-					
-						{/* <FontAwesomeIcon
-							className='cart_nav'
-							icon={faCartShopping}
-							alt='shopping cart'
-						/> */}
+						<li>
+							<Link activeClassName='active' href='/work'>
+								<a>Instagram</a>
+							</Link>
+						</li>
 					</ul>
 					<div className='hamburger' onClick={toggleHamburger}>
 						<Hamburger isOpen={hamburgerOpen} />
 					</div>
 				</div>
-				<div className='logo_nav_container'>
-					<Image className='logo_nav' src={logo} href='/index' alt='logo' />
-				</div>
+				<Link activeClassName='active' href='/'>
+					<div className='logo_nav_container'>
+						<Image className='logo_nav' src={logo} href='/index' alt='logo'/>
+					</div>
+				</Link>
 			</div>
 		</section>
 	);

@@ -3,3 +3,22 @@
     height: 50vh;
     background-color: rgb(153, 216, 192);
 }
+
+
+.fullscreen-container {
+    display: flex;
+    width: 100%;
+    height: 100%; 
+    margin: auto;
+} 
+
+/* .main-container {
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+    margin: auto;
+} */
+
+.page-title {
+
+}

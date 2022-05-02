@@ -10,12 +10,12 @@ export default function Home({
   }: InferGetStaticPropsType<typeof getStaticProps>) {
     return (
       <div className='fullwidth-container'>
-        <div className='main-container flex-col'>
             {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
-        <main className="flex min-h-screen flex-col items-center justify-center py-2 ">
-        <header className='w-max'><Nav/></header>
+        <div className='fullscreen-container flex-col'>
+        <main className=" main-container flex min-h-screen flex-col py-2 ">
+        <header><Nav/></header>
            
-        <h1 className='text-2xl	text-zinc-900 font-bold'>About my projects</h1>
+        <h1 className='page-title text-2xl	text-zinc-900 font-bold'>About my projects</h1>
         <p className='about-paragraph text-base text-zinc-600 flex-1 w-2/3'>I'm baby woke before they sold out pug, art party migas heirloom cardigan keytar shaman. Dreamcatcher distillery sriracha chartreuse man braid. Photo booth hoodie cliche, post-ironic pork belly hexagon craft beer bespoke occupy next level hell of. Single-origin coffee post-ironic shaman fashion axe lumbersexual</p>
         <div className='all-products-container grid gap-5 grid-cols-4'>
             <div className='project-card-container'>
@@ -39,7 +39,7 @@ export default function Home({
             <p>4</p>
             </div>
             
-        </div>
+          </div>
       <footer>This is Foot</footer>
       </main>
       </div>
