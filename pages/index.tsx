@@ -16,7 +16,7 @@ export default function Home({
     <body>
       <div className='hero-image-container'>
     <div className='fullscreen-container flex-col' >
-        <main className="main-container min-h-screen  py-2">
+        <main className="main-container min-h-screen py-2">
         {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
         {/* <pre>{findArrayElementById(products, 1)}</pre> */}
         <header><Nav/></header>
