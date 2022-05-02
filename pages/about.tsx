@@ -8,7 +8,7 @@ import Nav from './components/navigation/navigation'
 export default function Home({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  console.log(findStrapiElementById(products, 2))
+  // console.log(findStrapiElementById(products, 2))
     return (
         <div className='main-about-container'>
         <header><Nav/></header>
