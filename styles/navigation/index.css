@@ -16,35 +16,47 @@
     overflow: hidden;
     z-index: 1000;
     transition: all 0.3s linear;
-    padding-top: 0.5rem;
+    padding-top: 10px;
 }
 .navigation ul li {
     list-style-type: none;
-    padding-right: 2rem;
+    /* padding-right: 2rem; */
+    padding-left: 20px;
     color: var(--secondary-color);
     font-size: 1.2rem;
-    
 }
-/* .cart_nav {
-    color: var(--secondary-color);
-    padding-right: 2rem;
-    margin: 0.4rem;
-} */
+
 
 .nav_section_container {
     display: flex;
-    justify-content: center;
-    background-color: #ECECEC;
+    flex-direction: row-reverse;
+    /* justify-content: flex-end; */
+    /* background-color: #ECECEC; */
+    width: 100%;
 }
 .nav_container {
-    min-width: 50rem;
+    min-width: 100%;
     display: flex;
     flex-direction: row-reverse;
-    position: relaltive;
+    /* position: relaltive; */
 }
 .active {
-    color: var(--main-color);
+    color: red;
 }
+
+.logo_nav_container {
+  display: flex;
+  height: fit-content;
+  margin: auto;
+}
+
+.logo-nav {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  /* margin: auto; */
+}
+
 
     @media (max-width: 767px) {
       .hamburger {

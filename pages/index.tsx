@@ -15,14 +15,14 @@ export default function Home({
   return (
     <body>
       <div className='hero-image-container'>
-    <div className='main-container flex-col' >
-        <main className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className='fullscreen-container flex-col' >
+        <main className="main-container min-h-screen  py-2">
         {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
         {/* <pre>{findArrayElementById(products, 1)}</pre> */}
         <header><Nav/></header>
-      <h1 className='text-2xl	text-zinc-900 font-bold font-light'>Bergen based designer. <br/>
+      <h1 className='hero-paragraph text-2xl	text-zinc-900 font-bold font-light flex justify-center '>Bergen based designer. <br/>
       Works in varius fields of design with focus on the meeting <br/>between form, materials and humans.</h1>
-      <p className='flex-1 w-2/3' >{products[1].attributes.description}</p>
+      <p className='flex-1 w-2/3' >{products[1].attributes.title}</p>
       
       <footer>This is Foot</footer>
       </main>

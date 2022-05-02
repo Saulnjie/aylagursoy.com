@@ -6,6 +6,7 @@ import Image from 'next/image';
 // import { library } from '@fortawesome/fontawesome-svg-core';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
+import logo from '../../../public/img/potlogo.png'
 
 export default function Nav() {
 	const [hamburgerOpen, setHamburgerOpen] = useState(false);
@@ -46,7 +47,7 @@ export default function Nav() {
 					</div>
 				</div>
 				<div className='logo_nav_container'>
-					{/* <Image className='logo_nav' src={logo} href='/index' alt='logo' /> */}
+					<Image className='logo_nav' src={logo} href='/index' alt='logo' />
 				</div>
 			</div>
 		</section>

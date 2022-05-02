@@ -1,9 +1,16 @@
-.main-container {
+.fullscreen-container {
     display: flex;
     width: 80%;
     height: 100%; 
     margin: auto;
 } 
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
 
 .hero-image-container {
     display: flex;
@@ -14,4 +21,10 @@
     background-position: center center;
     display: flex;
     height: 100%;
+}
+
+.hero-paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
