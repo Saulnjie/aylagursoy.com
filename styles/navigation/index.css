@@ -71,7 +71,9 @@
         z-index: 1000;
       }
       .navigation ul {
-    
+
+        /* display: ${hamburgerOpen ? 'inline' : 'none'}; Denne er JSX?  */
+
         background-color: white;
         height: fit-content;
         width: 50%;

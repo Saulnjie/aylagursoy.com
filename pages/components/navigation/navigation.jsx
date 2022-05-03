@@ -52,6 +52,22 @@ export default function Nav() {
 						<Image className='logo_nav' src={logo} href='/index' alt='logo'/>
 					</div>
 				</Link>
+
+				<style jsx>{`
+				 @media (max-width: 767px) {
+				.navigation ul {
+                            display: ${hamburgerOpen ? 'inline' : 'none'};
+                            background-color: white;
+                            height: fit-content;
+                            width: 100vw;
+                            margin-top: 50px;
+                            position: fixed;
+                            text-align: center;
+                            -webkit-box-shadow: 0px 1px 3px 1px #5e5e5e;
+                            box-shadow: 0px 1px 3px 1px #5e5e5e;
+                            z-index: 500;
+                        }}
+				`}</style>			
 			</div>
 		</section>
 	);

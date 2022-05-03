@@ -22,7 +22,7 @@ export default function Home({
         <header><Nav/></header>
       <h1 className='hero-paragraph text-2xl	text-zinc-900 font-bold font-light flex justify-center '>Bergen based designer. <br/>
       Works in varius fields of design with focus on the meeting <br/>between form, materials and humans.</h1>
-      <p className='flex-1 w-2/3' >{products[1].attributes.title}</p>
+      <p className='flex-1 w-2/3' >{products[2].attributes.title}</p>
       
       <footer>This is Foot</footer>
       </main>
