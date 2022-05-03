@@ -41,5 +41,15 @@
     margin: auto;
 } */
 
-.page-title {
+.hero-page-title {
+    margin: auto;
+}
+
+.project-card-container {
+    max-width: fit-content;
+}
+
+.nav-work-container {
+    width: 66%;
+    margin: auto;
 }
