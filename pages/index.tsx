@@ -1,9 +1,5 @@
 import type { InferGetStaticPropsType } from 'next'
 import { ProductsResponse } from '../types/products-response'
-import Image from 'next/image'
-import mainImage from '../public/img/mainbanner.jpg'
-import aboutimage from '../public/img/aboutprofile.jpg'
-import findStrapiElementById from './utils/strapiutil'
 import Nav from './components/navigation/navigation'
 
 

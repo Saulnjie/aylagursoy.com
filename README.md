@@ -83,3 +83,13 @@ Resources
 Report template included in the repo.
 
 Video on deploying Strapi to Heroku
+
+---
+
+Ting og se på:
+
+1. Bruke json man får ved bruk av ID osv - mappe det
+2. implementere jwt-token og security
+3. Post metode
+4. contact form
+5. searchbar - se gammel eksamen

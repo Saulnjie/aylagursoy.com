@@ -12,7 +12,7 @@ export default function Home({
     return (
       // <div className='nav-wrapper'>
       <div className='fullwidth-container'>
-        <div className='nav-work-container'> 
+        <div className='nav-work-container py-2'> 
         <header><Nav/></header>
         </div>
         <div className='fullscreen-container flex-col'><h2 className='hero-page-title text-zinc-50 text-3xl font-semibold'>Work</h2></div>
