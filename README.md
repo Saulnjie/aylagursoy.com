@@ -90,6 +90,7 @@ Ting og se på:
 
 1. Bruke json man får ved bruk av ID osv - mappe det
 2. implementere jwt-token og security
-3. Post metode
-4. contact form
-5. searchbar - se gammel eksamen
+3. Post metode / contact form
+
+4. searchbar - se gammel eksamen
+5. Hva skjer med images? Grainy, og vrange

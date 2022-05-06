@@ -20,7 +20,7 @@ export default function Home({
             {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
         <h1 className='page-title text-2xl	text-zinc-900 font-bold'>About my projects</h1>
         <p className='about-paragraph text-base text-zinc-600 w-2/3'>I'm baby woke before they sold out pug, art party migas heirloom cardigan keytar shaman. Dreamcatcher distillery sriracha chartreuse man braid. Photo booth hoodie cliche, post-ironic pork belly hexagon craft beer bespoke occupy next level hell of. Single-origin coffee post-ironic shaman fashion axe lumbersexual</p>
-        
+
         <div className='all-products-container grid gap-5 grid-cols-4'>
             <div className='project-card-container'>
                 <Image src={mainImage} width={300} height={250}/>
