@@ -6,7 +6,7 @@ import Image from 'next/image';
 // import { library } from '@fortawesome/fontawesome-svg-core';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
-import logo from '../../../public/img/potlogo.png'
+import logo from '../../../public/img/logoption.png'
 
 export default function Nav() {
 	const [hamburgerOpen, setHamburgerOpen] = useState(false);
