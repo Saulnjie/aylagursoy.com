@@ -13,36 +13,12 @@ export default function Home({
       <div className='hero-image-container'>
     <div className='fullscreen-container flex-col' >
         <main className="main-container min-h-screen py-2">
-        {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
-        {/* <pre>{findArrayElementById(products, 1)}</pre> */}
+
         <header><Nav/></header>
       <h1 className='hero-paragraph text-2xl	text-zinc-900 font-bold font-light flex justify-center '>Bergen based designer. <br/>
       Works in varius fields of design with focus on the meeting <br/>between form, materials and humans.</h1>
-      <p className='flex-1 w-2/3' >{products[2].attributes.title}</p>
+      {/* <p className='flex-1 w-2/3' >{products[2].attributes.description}</p> */}
       
-
-      
-{/* <div className="login-box">
-    <h2>Login</h2>
-    <form>
-      <div className="user-box">
-        <input type="text" name="" placeholder='username here...' required=""/>
-        <label>Username</label>
-      </div>
-      <div className="user-box">
-        <input type="password" name="" placeholder='password here...' required=""/>
-        <label>Password</label>
-      </div>
-      <a href="#">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Submit
-      </a>
-    </form>
-  </div> */}
-
 
       <footer>This is Foot</footer>
       </main>
@@ -66,18 +42,3 @@ export async function getStaticProps() {
     },
   }
 }
-
-
-// function findArrayElementById(products, id) {
-//   console.log(products)
-//   return products.find((element) => {
-//     return element.id === id;
-//   })
-// }
-
-
-// const allProducts = products.map((products) =>
-// <p>{products}</p>);
-
-
-

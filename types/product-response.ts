@@ -1,3 +1,4 @@
+
 export interface ProductResponse {
   data: Data;
   meta: Meta;
@@ -16,6 +17,8 @@ export interface Attributes {
   publishedAt:    Date;
   specifications: string;
   purchased:      string;
+  // coverImage:     HTMLImageElement; Stemmer dette for å få images?
+  // additionalImages: HTMLImageElement;
 }
 
 export interface Meta {

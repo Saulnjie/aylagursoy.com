@@ -9,8 +9,8 @@ export default function Home({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <div className="fullwidth-container">
-      <div className="nav-work-container py-2">
+        <div className="fullwidth-container">
+    <div className="nav-work-container py-2">
         <header>
           <Nav />
         </header>
@@ -42,7 +42,6 @@ export default function Home({
                   {product.attributes.title}
                 </h3>
                 <p>{product.attributes.description}</p>
-
                 </a>
               </Link>
             )

@@ -20,13 +20,6 @@ export default function Nav() {
 			<div className='nav_container'>
 				<div className='navigation'>
 					<ul>
-						{/* <li>
-							<Link activeClassName='active' href='/'>
-								<div className='logo_nav_container'>
-									<Image className='logo_nav' src={logo} href='/index' alt='logo' />
-								</div>
-							</Link>
-						</li> */}
 						<li>
 							<Link activeClassName='active' href='/about'>
 								<a>About</a>
@@ -38,7 +31,7 @@ export default function Nav() {
 							</Link>
 						</li>
 						<li>
-							<Link activeClassName='active' href='/work'>
+							<Link activeClassName='active' href='https://www.instagram.com/aylagursoy/'>
 								<a>Instagram</a>
 							</Link>
 						</li>

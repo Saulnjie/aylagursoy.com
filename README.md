@@ -86,11 +86,12 @@ Video on deploying Strapi to Heroku
 
 ---
 
-Ting og se på:
+Ting og fikse:
 
-1. Bruke json man får ved bruk av ID osv - mappe det
+1. Rydde opp i filene
 2. implementere jwt-token og security
 3. Post metode / contact form
 
 4. searchbar - se gammel eksamen
 5. Hva skjer med images? Grainy, og vrange
+6. kan nav brukes i app.js?
