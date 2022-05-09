@@ -20,10 +20,10 @@ export default function Product({
         <div className='product-info-right-container'>R</div>
       </div>
 
+      <p>Product Images</p>
       <div className='product-image-overall-container'>
         <div className='product-image-left-container'>
-        <p>Product Images</p>
-          <div className='product-image-one'>1</div>
+          <div className='product-image-one'>${product.data.attributes.additionalImages}</div>
         </div>
         <div className='product-image-right-container'>
           <div className='product-image-two'>2</div>

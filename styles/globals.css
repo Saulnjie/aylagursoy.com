@@ -37,6 +37,9 @@ li {
   list-style:circle ;
 }
 
+footer {
+  height: 200px;
+}
 
 .main-container {
   display: flex;

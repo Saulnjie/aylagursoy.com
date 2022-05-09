@@ -1,7 +1,7 @@
 .product-banner-container {
     display: flex;
     flex-direction: column;
-    height: 50%;
+    height: 100%;
     width: 100%;
     background-color: blueviolet;
 }
@@ -27,7 +27,7 @@
 .product-image-overall-container {
     display: flex;
     background-color:beige;
-    height: 400px;
+    height: 70%;
     flex-direction: row;
     justify-content: space-between;
 }
@@ -35,6 +35,7 @@
 .product-image-left-container {
 width: 49%;
 background-color: lightcoral;
+height: 100%;
 }
 
 .product-image-right-container {

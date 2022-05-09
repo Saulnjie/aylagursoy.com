@@ -42,6 +42,10 @@ export default function Home({
                   {product.attributes.title}
                 </h3>
                 <p>{product.attributes.description}</p>
+                <img className='test-img' src="${product.attributes.coverImage}"/>
+               
+                {/* <div>{product.attributes.coverImage.data.attributes.formats.medium}</div> */}
+                
                 </a>
               </Link>
             )
@@ -55,7 +59,7 @@ export default function Home({
 }
 
 export async function getStaticProps() {
-  const response = await fetch(`${CMS_URL}/api/products`)
+  const response = await fetch(`${CMS_URL}/api/products?populate=*?`)
 
   if (!response.ok) {
     throw new Error(await response.text())
