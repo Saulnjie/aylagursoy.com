@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Nav from '../components/navigation/navigation'
 import { CMS_URL } from '../../consts'
 import Link from "next/link"
+import SearchBar from "../components/searchbar/search"
+
 
 export default function Home({
   products,
@@ -21,6 +23,7 @@ export default function Home({
         </h2>
       </div>
       <main className="main-container flex min-h-screen flex-col py-2">
+          <SearchBar />
         <h1 className="page-title text-2xl	font-bold text-zinc-900">
           About my projects
         </h1>
@@ -32,11 +35,11 @@ export default function Home({
           post-ironic shaman fashion axe lumbersexual
         </p>
 
-        <div className="all-products-container grid grid-cols-4 gap-5">
+        <div className="all-products-container cards grid grid-cols-4 gap-5">
           {products.map((product) => {
             return (
               <Link  href={`/work/${product.id}`}>
-                <a className="project-card-container">
+                <a className="project-card-container cards">
                 <Image src={"/img/mainbanner.jpg"} width={300} height={250} />
                 <h3 className="text-xl font-semibold text-zinc-900">
                   {product.attributes.title}

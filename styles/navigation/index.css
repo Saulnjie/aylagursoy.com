@@ -6,8 +6,8 @@
     height: fit-content;
     display: flex;
     flex-direction: row-reverse;
-}
-.navigation ul {
+  }
+  .navigation ul {
     display: flex;
     flex-wrap: wrap;
     float: right;
@@ -33,8 +33,8 @@
     /* justify-content: flex-end; */
     /* background-color: #ECECEC; */
     width: 100%;
-}
-.nav_container {
+  }
+  .nav_container {
     min-width: 100%;
     display: flex;
     flex-direction: row-reverse;

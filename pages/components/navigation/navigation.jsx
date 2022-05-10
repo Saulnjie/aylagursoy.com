@@ -7,6 +7,7 @@ import Image from 'next/image';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import logo from '../../../public/img/logoption.png'
+import SearchBar from '../searchbar/search';
 
 export default function Nav() {
 	const [hamburgerOpen, setHamburgerOpen] = useState(false);
@@ -40,6 +41,7 @@ export default function Nav() {
 						<Hamburger isOpen={hamburgerOpen} />
 					</div>
 				</div>
+				{/* <SearchBar/> */}
 				<Link activeClassName='active' href='/'>
 					<div className='logo_nav_container'>
 						<Image className='logo_nav' src={logo} href='/index' alt='logo'/>

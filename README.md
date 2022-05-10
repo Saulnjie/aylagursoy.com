@@ -87,11 +87,13 @@ Video on deploying Strapi to Heroku
 ---
 
 Ting og fikse:
-
+bør værra lett:
 1. Rydde opp i filene
-2. implementere jwt-token og security
-3. Post metode / contact form
+3. searchbar - Koblet input med livesearchen....
+4. Hva skjer med images? Grainy, og vrange
 
-4. searchbar - se gammel eksamen
-5. Hva skjer med images? Grainy, og vrange
-6. kan nav brukes i app.js?
+Hardshit:
+2. implementere jwt-token og security
+5. Post metode / contact form
+
+
