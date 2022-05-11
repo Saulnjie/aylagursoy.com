@@ -47,7 +47,26 @@
 
 .project-card-container {
     max-width: fit-content;
+    width: 100%;
 }
+
+.about-paragraph {
+margin-bottom: 30px;
+margin-top: 10px;
+}
+
+.searchbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* hmmm wtf?
+.project-card-container:hover {
+ color: yellow !important;
+  } */
+
 
 .nav-work-container {
     width: 66%;

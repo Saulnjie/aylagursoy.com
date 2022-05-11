@@ -18,16 +18,18 @@ export default function Home({
         </header>
       </div>
       <div className="fullscreen-container flex-col">
-        <h2 className="hero-page-title text-3xl font-semibold text-zinc-50">
+        <h1 className="hero-page-title text-3xl font-semibold text-zinc-50">
           Work
-        </h2>
+        </h1>
       </div>
       <main className="main-container flex min-h-screen flex-col py-2">
-          <SearchBar />
-        <h1 className="page-title text-2xl	font-bold text-zinc-900">
+        <div className='searchbar-container'>
+        <h2 className="page-title text-2xl font-bold text-zinc-900">
           About my projects
-        </h1>
-        <p className="about-paragraph w-2/3 text-base text-zinc-600">
+        </h2>
+          <SearchBar />
+        </div>
+        <p className="about-paragraph w-3/3 text-light text-zinc-600">
           I'm baby woke before they sold out pug, art party migas heirloom
           cardigan keytar shaman. Dreamcatcher distillery sriracha chartreuse
           man braid. Photo booth hoodie cliche, post-ironic pork belly hexagon
@@ -41,10 +43,10 @@ export default function Home({
               <Link  href={`/work/${product.id}`}>
                 <a className="project-card-container cards">
                 <Image src={"/img/mainbanner.jpg"} width={300} height={250} />
-                <h3 className="text-xl font-semibold text-zinc-900">
+                <h3 className="text-xl font-semibold text-zinc-600">
                   {product.attributes.title}
                 </h3>
-                <p>{product.attributes.description}</p>
+                <p className='text-zinc-600 text-light'>{product.attributes.introDescription}</p>
                 <img className='test-img' src="${product.attributes.coverImage}"/>
                
                 {/* <div>{product.attributes.coverImage.data.attributes.formats.medium}</div> */}

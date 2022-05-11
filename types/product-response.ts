@@ -43,6 +43,7 @@ export interface PurpleAttributes {
   publishedAt:      Date;
   specifications:   string;
   purchased:        string;
+  introDescription: string;
   coverImage:       CoverImage;
   additionalImages: AdditionalImages;
 }

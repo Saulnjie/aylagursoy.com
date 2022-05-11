@@ -14,27 +14,25 @@ export default function Product({
       {/* </div> */}
       <div className='product-banner-container'><h2 className='text-zinc-50 font-semibold'>{product.data.attributes.title}</h2></div>
         {/* <p className='img-test'>Viewing product: {product.data.attributes.coverImage}</p> */}
-      <p className='crums text-gray-500 mt-4'>Breadcrums</p>
+      <p className='crums text-zinc-500 mt-4'>Breadcrums</p>
 
     <div className='product-info-overall-container mt-12'>
         <div className='product-info-left-container'>
-          <h3 className='product-subtitles mb-1'>About this project</h3>
-          <p className='product-description'>Viewing product: {product.data.attributes.description}</p>
+          <h3 className='product-subtitles mb-1 text-zinc-900 font-bold text-lg'>About this project</h3>
+          <p className='product-description text-zinc-600 font-normal text-base leading-7'>{product.data.attributes.description}</p>
         </div>
 
         <div className='product-info-right-container'>
-
-        <h3 className='product-subtitles mb-1'>Details</h3>
-          <p className='product-description'>Viewing product: {product.data.attributes.title}</p>
-
+          <h3 className='product-subtitles mb-1 text-zinc-900 font-bold text-lg'>Details</h3>
+          <p className='product-description text-zinc-600 font-light text-base leading-7'>Viewing product: {product.data.attributes.title}</p>
           <div className='product-additional-info-container mt-8'>
             <div className='addition-production-info'>
-              <h4 className='product-mini-titles mb-1'>Prototype</h4>
-              <p className=''>{product.data.attributes.specifications}</p>
+              <h4 className='product-mini-titles mb-1 text-zinc-900 font-bold text-base'>Prototype</h4>
+              <p className=' text-zinc-600 font-light text-sm leading-5'>{product.data.attributes.specifications}</p>
             </div>
-            <div className='addition-production-info'>
-              <h4 className='product-mini-titles mb-1'>Purchase</h4>
-              <p className=''>{product.data.attributes.purchased}</p>
+            <div className='addition-production-info text-zinc-900'>
+              <h4 className='product-mini-titles mb-1 font-bold text-base'>Purchase</h4>
+              <p className=' text-zinc-600 font-light text-sm leading-5'>{product.data.attributes.purchased}</p>
             </div>
           </div>
 
@@ -42,7 +40,7 @@ export default function Product({
 
       </div>
 
-      <p className='mt-12'>Product Images</p>
+      <p className='mt-12 text-zinc-900 font-bold text-lg'>Product Images</p>
       <div className='product-image-overall-container'>
         <div className='product-image-left-container'>
           <div className='product-image-one'>${product.data.attributes.additionalImages}</div>

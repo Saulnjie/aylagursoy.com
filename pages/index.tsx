@@ -12,9 +12,10 @@ export default function Home({
     <body>
       <div className='hero-image-container'>
     <div className='fullscreen-container flex-col' >
-        <main className="main-container min-h-screen py-2">
-
+        <div className="nav-work-container py-2">
         <header><Nav/></header>
+        </div>
+        <main className="main-container min-h-screen py-2">
       <h1 className='hero-paragraph text-2xl	text-zinc-900 font-bold font-light flex justify-center '>Bergen based designer. <br/>
       Works in varius fields of design with focus on the meeting <br/>between form, materials and humans.</h1>
       {/* <p className='flex-1 w-2/3' >{products[2].attributes.description}</p> */}

@@ -45,6 +45,7 @@ export interface PurpleAttributes {
     publishedAt:      Date;
     specifications:   string;
     purchased:        null | string;
+    introDescription: string;
     coverImage:       CoverImage;
     additionalImages: AdditionalImages;
 }
@@ -123,4 +124,3 @@ export interface Pagination {
     pageCount: number;
     total:     number;
 }
-
