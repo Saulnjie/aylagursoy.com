@@ -29,7 +29,7 @@ export default function Home({
         </h2>
           <SearchBar />
         </div>
-        <p className="about-paragraph w-3/3 text-light text-zinc-600">
+        <p className="about-work-paragraph w-2/3 text-light text-zinc-600">
           I'm baby woke before they sold out pug, art party migas heirloom
           cardigan keytar shaman. Dreamcatcher distillery sriracha chartreuse
           man braid. Photo booth hoodie cliche, post-ironic pork belly hexagon
@@ -48,7 +48,7 @@ export default function Home({
                 </h3>
                 <p className='text-zinc-600 text-light'>{product.attributes.introDescription}</p>
                 <img className='test-img' src="${product.attributes.coverImage}"/>
-               
+                
                 {/* <div>{product.attributes.coverImage.data.attributes.formats.medium}</div> */}
                 
                 </a>

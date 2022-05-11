@@ -18,7 +18,7 @@ export default function Home({
         <div className='left-about-container flex-col'>
         {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
         <h1 className='text-2xl	text-zinc-900 font-bold'>About</h1>
-        <p className='about-paragraph text-base text-zinc-600'>Furniture designer based in Bergen.
+        <p className=' about-sub-title about-paragraph text-base text-zinc-600'>Furniture designer based in Bergen.
 Ayla focuses on the meeting between form, materials and humans, and she is driven by her curiosity and
 attention to details. She is a hands
 -

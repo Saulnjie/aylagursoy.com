@@ -21,7 +21,7 @@ export default function Home({
       {/* <p className='flex-1 w-2/3' >{products[2].attributes.description}</p> */}
       
 
-      <footer>This is Foot</footer>
+      {/* <footer>This is Foot</footer> */}
       </main>
       </div>
       </div>

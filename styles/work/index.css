@@ -9,7 +9,7 @@
 .fullscreen-container {
     display: flex;
     width: 100%;
-    height: 100%; 
+    height: 90%; 
     margin: auto;
 }  
 
@@ -50,7 +50,7 @@
     width: 100%;
 }
 
-.about-paragraph {
+.about-work-paragraph {
 margin-bottom: 30px;
 margin-top: 10px;
 }

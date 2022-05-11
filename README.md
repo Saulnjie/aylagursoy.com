@@ -88,12 +88,12 @@ Video on deploying Strapi to Heroku
 
 Ting og fikse:
 bør værra lett:
+
 1. Rydde opp i filene
-3. searchbar - Koblet input med livesearchen....
-4. Hva skjer med images? Grainy, og vrange
+2. searchbar - Koblet input med livesearchen....
+3. Hva skjer med images? Grainy, og vrange
+4. hvordan får jeg <br/> i strapi?
+5. hamburger funker ikke bra
 
-Hardshit:
-2. implementere jwt-token og security
-5. Post metode / contact form
-
-
+Hardshit: 2. implementere jwt-token og security 5. Post metode / contact form
+JWT er neste fiksa, se admin og loggin tsx

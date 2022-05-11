@@ -16,6 +16,6 @@ export default function Admin() {
     setJwt(jwt)
   }, [])
 
-  return <div>{jwt}</div>
+  return <div>{jwt} HER FYLLER JEG INN ADMIN SIDEN</div>
 }
 

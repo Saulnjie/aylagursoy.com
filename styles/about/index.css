@@ -4,8 +4,17 @@
     width: 100%;
     height: 100%; 
     margin: auto;
+    margin-top: 30px;
     /* justify-content: space-between; */
 } 
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 66%;
+    height: 100%;
+    margin: auto;
+  }
+  
 
 .left-about-container{
     width: 50%;
@@ -36,13 +45,18 @@
 
 .about-sub-title {
     line-height: 1.8 !important;
+    margin-top: 20px;
 }
 .about-paragraph {
     line-height: 1.8 !important;
+    padding-bottom: 20px;
+    border-bottom: 1.5px solid rgb(228 228 231);;
 }
 
 .about-ul-container {
     line-height: 1.8 !important;
+    padding-bottom: 20px;
+    border-bottom: 1.5px solid rgb(228 228 231);;
 }
 
 .about-ul-container li {
