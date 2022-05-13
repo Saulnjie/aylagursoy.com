@@ -1,5 +1,6 @@
 import { useState, FormEvent } from 'react'
 import { CMS_URL } from '../consts'
+import router from 'next/router'
 
 const INITIAL_STATE = {
   email: '',
@@ -28,8 +29,8 @@ export default function Login() {
       return
     }
     const { jwt, user } = await response.json()
-    sessionStorage.setItem("jwt", jwt)
-
+    sessionStorage.setItem("jwt", jwt) 
+    router.push('/admin')
   }
 
   return (
