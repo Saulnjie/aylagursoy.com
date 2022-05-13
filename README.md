@@ -95,5 +95,5 @@ bør værra lett:
 4. hvordan får jeg <br/> i strapi?
 5. hamburger funker ikke bra
 
-Hardshit: 2. implementere jwt-token og security 5. Post metode / contact form
+Hardshit: 2. implementere security 5. Post metode / contact form
 JWT er neste fiksa, se admin og loggin tsx
