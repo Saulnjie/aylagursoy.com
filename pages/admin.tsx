@@ -34,6 +34,7 @@ export default function Admin( {
         <p className='token-paragraph'></p>
       </div>
 
+       <h2 className='text-lg	text-zinc-900 font-bold'>These are all your posted products and articles</h2>
      <div className="all-products-container cards grid grid-cols-4 gap-5">
           {products.map((product) => {
             return (
@@ -43,6 +44,7 @@ export default function Admin( {
                 <h3 className="text-xl font-semibold text-zinc-600">
                   {product.attributes.title}
                 </h3>
+                <button className='delete-btn'>Delete</button>
                 {/* <p className='text-zinc-600 text-light'>{product.attributes.introDescription}</p> */}
                 {/* <img className='test-img' src="${product.attributes.coverImage}"/> */}
                 </a>

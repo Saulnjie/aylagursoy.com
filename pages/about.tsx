@@ -4,6 +4,7 @@ import Image from 'next/image'
 import aboutimage from '../public/img/aboutprofile.jpg'
 import findStrapiElementById from './utils/strapiutil'
 import Nav from './components/navigation/navigation'
+import Contact from './contact'
 
 export default function Home({
   products,
@@ -77,15 +78,16 @@ designers.
         <p className='contact-paragraph text-base text-zinc-600'>For any questions or inquiries, please do not hesitate to contact me through social media or by email.</p>
         <h3 className='text-xl text-zinc-900 font-bold'>Contact</h3>
         <div className='icon-container text-zinc-600 flex-row'>
-        <p className='icon-text text-sm '>me@aylagursoy.com </p>
+        {/* <p className='icon-text text-sm '>me@aylagursoy.com </p>
         <p className='icon-text text-xs '>+47 950 36 921</p>
-        <p className='icon-text text-sm '>@aylagursoy</p>
+        <p className='icon-text text-sm '>@aylagursoy</p> */}
+        <Contact/>
         </div>
         </div>
 
         </div>
       </main>
-      <footer>This is Foot</footer>
+      <footer></footer>
       
       </div>
       </div>

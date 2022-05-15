@@ -27,7 +27,7 @@ export default function Home({
       
             
         </div>
-      <footer>This is Foot</footer>
+      <footer></footer>
       </main>
       </div>
       </div>

@@ -28,11 +28,11 @@ export default function Product({
           <div className='product-additional-info-container mt-8'>
             <div className='addition-production-info'>
               <h4 className='product-mini-titles mb-1 text-zinc-900 font-bold text-base'>Prototype</h4>
-              <p className=' text-zinc-600 font-light text-sm leading-5'>{product.data.attributes.specifications}</p>
+              <p className='product-mini-titles-text text-zinc-600 font-light text-sm leading-5'>{product.data.attributes.specifications}</p>
             </div>
             <div className='addition-production-info text-zinc-900'>
               <h4 className='product-mini-titles mb-1 font-bold text-base'>Purchase</h4>
-              <p className=' text-zinc-600 font-light text-sm leading-5'>{product.data.attributes.purchased}</p>
+              <p className='product-mini-titles-text text-zinc-600 font-light text-sm leading-5'>{product.data.attributes.purchased}</p>
             </div>
           </div>
 
@@ -43,17 +43,19 @@ export default function Product({
       <p className='mt-12 text-zinc-900 font-bold text-lg'>Product Images</p>
       <div className='product-image-overall-container'>
         <div className='product-image-left-container'>
-          <div className='product-image-one'>${product.data.attributes.additionalImages}</div>
+          <div className='product-image-one'>${product.data.attributes.coverImage}</div>
         <Link href={`/work`}>
         <button className='back-btn'>Back</button>
         </Link>
         </div>
         <div className='product-image-right-container'>
-          <div className='product-image-two'>2</div>
+          <div className='product-image-two'>
+            <img src='${product.data.attributes.additionalImages}'></img>
+          </div>
           <div className='product-image-three'>3</div>
         </div>
       </div>
-    <footer>This is Foot</footer>
+    <footer></footer>
     </main>
   </div>
 }
