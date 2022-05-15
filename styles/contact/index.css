@@ -1,0 +1,52 @@
+
+.contact-container {
+    /* background-color: aqua; */
+    display: flex;
+
+}
+
+.name-and-email-container {
+    display: flex;
+    
+}
+
+.contact-name-input-container {
+    /* background-color: red; */
+    width: 50%;
+}
+
+.contact-name-input-container input {
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+
+
+.contact-email-input-container {
+width: 50%;
+}
+
+.contact-email-input-container input {
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.submit-message-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-confirmation {
+    color: rgb(21 128 61);
+}
+
+
+.contact-msg-input-container textarea  {
+width: 100%;
+/* background-color: peru; */
+border-radius: 4px;
+border: 1px solid gray;
+/* border: none;
+border-bottom: 1px solid gray; */
+}
+

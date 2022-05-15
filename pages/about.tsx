@@ -74,9 +74,9 @@ designers.
         // height={600}
         // width={450} 
         />
-        <div className='contact-container'>
         <p className='contact-paragraph text-base text-zinc-600'>For any questions or inquiries, please do not hesitate to contact me through social media or by email.</p>
         <h3 className='text-xl text-zinc-900 font-bold'>Contact</h3>
+        <div className='contact-container'>
         <div className='icon-container text-zinc-600 flex-row'>
         {/* <p className='icon-text text-sm '>me@aylagursoy.com </p>
         <p className='icon-text text-xs '>+47 950 36 921</p>

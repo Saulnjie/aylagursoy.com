@@ -35,10 +35,11 @@ export default function Contact() {
   }
 
   return (
-    <div>
-      {message && <span>{message}</span>}
+    <div className='contact-container'>
+     
       <form onSubmit={handleSubmit}>
-        <div>
+          <div className='name-and-email-container'>
+        <div className='contact-name-input-container'>
           <label className="block" htmlFor="name">
             Name
           </label>
@@ -57,7 +58,7 @@ export default function Contact() {
             className="block"
           />
         </div>
-        <div>
+        <div className='contact-email-input-container'>
           <label htmlFor="email">Email</label>
           <input
             className="block"
@@ -74,7 +75,8 @@ export default function Contact() {
             required
           />
         </div>
-        <div>
+        </div>
+        <div className='contact-msg-input-container'>
           <label className="block" htmlFor="message">
             Message
           </label>
@@ -91,7 +93,12 @@ export default function Contact() {
             required
           />
         </div>
-        <button>Submit</button>
+        <div className='submit-message-container'>
+          <div className='submit-confirmation'>
+        {message && <span>{message}</span>}
+        </div>
+        <button className='submit-btn'>Send message</button>
+        </div>
       </form>
       <pre>{JSON.stringify(formValues, null, 2)}</pre>
     </div>
