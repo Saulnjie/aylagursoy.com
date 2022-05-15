@@ -34,9 +34,10 @@ export default function Login() {
   }
 
   return (
+    <div className='form-container'>
     <form onSubmit={handleSubmit}>
       {error && <span className="text-red-700">Error: {error}</span>}
-      <div>
+      <div className='email-input'>
         <label className="block" htmlFor="email">
           Email
         </label>
@@ -51,9 +52,10 @@ export default function Login() {
           required
           id="email"
           name="email"
+          
         />
       </div>
-      <div>
+      <div className='password-input'>
         <label htmlFor="password" className="block">
           Password
         </label>
@@ -68,9 +70,11 @@ export default function Login() {
           required
           id="password"
           name="password"
+          
         />
       </div>
-      <button>Login</button>
+      <button className='login-btn'>Login</button>
     </form>
+    </div>
   )
 }
