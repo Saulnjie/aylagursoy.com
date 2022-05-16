@@ -1,5 +1,5 @@
-function liveSearch() {
-  let cards = document.querySelectorAll('.cards')
+export default function liveSearch() {
+  let cards = document.querySelectorAll('.all-products-container')
   let search_query = document.getElementById('searchbox').value
   for (var i = 0; i < cards.length; i++) {
     if (cards[i].innerText.toLowerCase().includes(search_query.toLowerCase())) {
