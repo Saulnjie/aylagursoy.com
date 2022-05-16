@@ -51,10 +51,10 @@ export default function Admin( {
 
     return  <div className='main-container'>
      <header><Nav/></header>
-     <div className='bcrums-container'>
+     <div className='bcrums-container flex flex-row justify-between'>
+     <h1 className=' text-3xl font-semibold text-zinc-900'>Admin page</h1>
      <Crums/>
      </div>
-     <h1 className=' text-3xl font-semibold text-zinc-900'>Admin page</h1>
      {jwt}
       <div className='token-contaier'>
         <p className='token-paragraph'>You are logged in</p>

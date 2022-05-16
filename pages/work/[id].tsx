@@ -28,7 +28,7 @@ export default function Product({
   return <div className='fullscreen-container'>
     <main className='main-container'>
     {/* <div className="nav-work-container py-2"> */}
-      <header><Nav/></header>
+      <header className='py-2'><Nav/></header>
       {/* </div> */}
       <div className='product-banner-container'><h2 className='text-zinc-50 font-semibold'>{product.data.attributes.title}</h2></div>
         {/* <p className='img-test'>Viewing product: {product.data.attributes.coverImage}</p> */}
@@ -36,7 +36,7 @@ export default function Product({
         <div className='bcrums-container'>
         <Crums/>
         </div>
-    <div className='product-info-overall-container mt-12'>
+    <div className='product-info-overall-container'>
         <div className='product-info-left-container'>
           <h3 className='product-subtitles mb-1 text-zinc-900 font-bold text-lg'>About this project</h3>
           <p className='product-description text-zinc-600 font-normal text-base leading-7'>{product.data.attributes.description}</p>
@@ -60,7 +60,7 @@ export default function Product({
 
       </div>
 
-      <p className='mt-12 text-zinc-900 font-bold text-lg'>Product Images</p>
+      <p className='mt-6 text-zinc-900 font-bold text-lg'>Product Images</p>
       <div className='product-image-overall-container'>
         <div className='product-image-left-container'>
           <div className='product-image-one'>${product.data.attributes.coverImage}</div>
