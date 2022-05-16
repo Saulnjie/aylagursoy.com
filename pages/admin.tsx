@@ -6,6 +6,18 @@ import Image from 'next/image'
 import type { InferGetStaticPropsType } from 'next'
 import { ProductsResponse } from '../types/products-response'
 import Nav from './components/navigation/navigation'
+import React from 'react';
+import Breadcrumbs from 'nextjs-breadcrumbs';
+
+const Crums = () => {
+  return (
+    <Breadcrumbs 
+    useDefaultStyle
+    transformLabel={(title) => title + ''}
+    />
+  );
+};
+
 
 export default function Admin( {
   products,
@@ -39,6 +51,9 @@ export default function Admin( {
 
     return  <div className='main-container'>
      <header><Nav/></header>
+     <div className='bcrums-container'>
+     <Crums/>
+     </div>
      <h1 className=' text-3xl font-semibold text-zinc-900'>Admin page</h1>
      {jwt}
       <div className='token-contaier'>

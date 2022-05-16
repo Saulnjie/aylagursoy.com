@@ -1,6 +1,19 @@
 import { useState, FormEvent } from 'react'
 import { CMS_URL } from '../consts'
 import router from 'next/router'
+import Nav from './components/navigation/navigation'
+import React from 'react';
+import Breadcrumbs from 'nextjs-breadcrumbs';
+
+const Crums = () => {
+  return (
+    <Breadcrumbs 
+    useDefaultStyle
+    transformLabel={(title) => title + ''}
+    />
+  );
+};
+
 
 const INITIAL_STATE = {
   email: '',
@@ -34,7 +47,12 @@ export default function Login() {
   }
 
   return (
+    <div className='main-container'>
+      <header><Nav/></header>
     <div className='form-container'>
+              {/* <div className='bcrums-container'>
+        <Crums/>
+        </div> */}
     <form onSubmit={handleSubmit}>
       {error && <span className="text-red-700">Error: {error}</span>}
       <div className='email-input'>
@@ -75,6 +93,7 @@ export default function Login() {
       </div>
       <button className='login-btn'>Login</button>
     </form>
+    </div>
     </div>
   )
 }

@@ -3,6 +3,24 @@ import Link from 'next/link'
 import { CMS_URL } from '../../consts'
 import { ProductResponse } from '../../types/product-response'
 import Nav from '../components/navigation/navigation'
+import React from 'react';
+import Breadcrumbs from 'nextjs-breadcrumbs';
+
+const Crums = () => {
+  return (
+    <Breadcrumbs 
+    useDefaultStyle
+    transformLabel={(title) => title + ''}
+    // replaceCharacterList={[{ from: '.', to: ' ' }]} kanskje bruke denne for å replace småbokstaver til store? eller bytte filnavn?
+    />
+  );
+};
+
+// En annen solution?
+// const Crums = () => {
+//   return <Breadcrumbs useDefaultStyle={true} omitIndexList={[1]} />;
+// };
+
 
 export default function Product({
   product,
@@ -14,8 +32,10 @@ export default function Product({
       {/* </div> */}
       <div className='product-banner-container'><h2 className='text-zinc-50 font-semibold'>{product.data.attributes.title}</h2></div>
         {/* <p className='img-test'>Viewing product: {product.data.attributes.coverImage}</p> */}
-      <p className='crums text-zinc-500 mt-4'>Breadcrums</p>
 
+        <div className='bcrums-container'>
+        <Crums/>
+        </div>
     <div className='product-info-overall-container mt-12'>
         <div className='product-info-left-container'>
           <h3 className='product-subtitles mb-1 text-zinc-900 font-bold text-lg'>About this project</h3>

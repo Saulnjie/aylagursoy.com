@@ -20,7 +20,6 @@ export default function Home({
       Works in varius fields of design with focus on the meeting <br/>between form, materials and humans.</h1>
       {/* <p className='flex-1 w-2/3' >{products[2].attributes.description}</p> */}
       
-
       {/* <footer>This is Foot</footer> */}
       </main>
       </div>

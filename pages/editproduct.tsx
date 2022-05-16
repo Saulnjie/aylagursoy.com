@@ -3,7 +3,17 @@ import { ProductsResponse } from '../types/products-response'
 import Image from 'next/image'
 import mainImage from '../public/img/mainbanner.jpg'
 import Nav from './components/navigation/navigation'
+import React from 'react';
+import Breadcrumbs from 'nextjs-breadcrumbs';
 
+const Crums = () => {
+  return (
+    <Breadcrumbs 
+    useDefaultStyle
+    transformLabel={(title) => title + ''}
+    />
+  );
+};
 
 export default function Home({
     products,
@@ -14,7 +24,9 @@ export default function Home({
             {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
         <main className="flex min-h-screen flex-col items-center justify-center py-2 ">
         <header className='w-max'><Nav/></header>
-           
+        <div className='bcrums-container'>
+        <Crums/>
+        </div>
         <h1 className='text-2xl	text-zinc-900 font-bold'>About my projects</h1>
         <p className='about-paragraph text-base text-zinc-600 flex-1 w-2/3'>I'm baby woke before they sold out pug, art party migas heirloom cardigan keytar shaman. Dreamcatcher distillery sriracha chartreuse man braid. Photo booth hoodie cliche, post-ironic pork belly hexagon craft beer bespoke occupy next level hell of. Single-origin coffee post-ironic shaman fashion axe lumbersexual</p>
         <div className='all-products-container grid gap-5 grid-cols-4'>

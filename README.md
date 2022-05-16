@@ -95,8 +95,8 @@ Ting og fikse:
 2. searchbar - Koblet input med livesearchen....
 3. Hva skjer med images? Grainy, og vrange
 4. hvordan får jeg <br/> i strapi? - list items
-5. hamburger funker ikke bra - GJØR RESPOSIVENESS
-6. lage breadcrums på product / eventuelt alle sider - bruke next routing på et vis?
+5. hamburger kunne trengt mer styling
+6.
 
 7. skjer refreshen på admin uten jwt token for det er local host?
 8. Post metode

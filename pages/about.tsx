@@ -5,6 +5,17 @@ import aboutimage from '../public/img/aboutprofile.jpg'
 import findStrapiElementById from './utils/strapiutil'
 import Nav from './components/navigation/navigation'
 import Contact from './contact'
+import React from 'react';
+import Breadcrumbs from 'nextjs-breadcrumbs';
+
+const Crums = () => {
+  return (
+    <Breadcrumbs 
+    useDefaultStyle
+    transformLabel={(title) => title + ''}
+    />
+  );
+};
 
 export default function Home({
   products,
@@ -15,6 +26,9 @@ export default function Home({
         <div className='main-container'>
         <header><Nav/></header>
         <div className='main-about-container'>
+        <div className='bcrums-container'>
+        <Crums/>
+        </div>
         <main className="flex min-h-screen  py-2">
         <div className='left-about-container flex-col'>
         {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
@@ -74,8 +88,8 @@ designers.
         // height={600}
         // width={450} 
         />
-        <p className='contact-paragraph text-base text-zinc-600'>For any questions or inquiries, please do not hesitate to contact me here, through social media or by email.</p>
         <h3 className='text-xl text-zinc-900 font-bold'>Contact</h3>
+        <p className='contact-paragraph text-base text-zinc-600'>For any questions or inquiries, please do not hesitate to contact me here, through social media or by email.</p>
         <div className='contact-container'>
         <div className='icon-container text-zinc-600 flex-row'>
         {/* <p className='icon-text text-sm '>me@aylagursoy.com </p>
