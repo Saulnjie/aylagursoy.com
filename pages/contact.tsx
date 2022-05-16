@@ -100,7 +100,7 @@ export default function Contact() {
         <button className='submit-btn'>Send message</button>
         </div>
       </form>
-      <pre>{JSON.stringify(formValues, null, 2)}</pre>
+      {/* <pre>{JSON.stringify(formValues, null, 2)}</pre> */}
     </div>
   )
 }

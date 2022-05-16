@@ -43,10 +43,10 @@ export default function Home({
               <Link  href={`/work/${product.id}`}>
                 <a className="project-card-container cards">
                 <Image src={"/img/mainbanner.jpg"} width={300} height={250} />
-                <h3 className="text-xl font-semibold text-zinc-600">
+                <h3 className="card-title text-xl font-semibold ">
                   {product.attributes.title}
                 </h3>
-                <p className='text-zinc-600 text-light'>{product.attributes.introDescription}</p>
+                <p className='card-description text-light'>{product.attributes.introDescription}</p>
                 <img className='test-img' src="${product.attributes.coverImage}"/>
                 
                 {/* <div>{product.attributes.coverImage.data.attributes.formats.medium}</div> */}

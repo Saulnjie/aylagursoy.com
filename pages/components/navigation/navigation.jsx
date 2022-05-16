@@ -53,9 +53,10 @@ export default function Nav() {
 				.navigation ul {
                             display: ${hamburgerOpen ? 'inline' : 'none'};
                             background-color: white;
+							border-radius: 4px;
                             height: fit-content;
-                            width: 100vw;
-                            margin-top: 50px;
+                            /* width: 100vw; */
+                            /* margin-top: 50px; */
                             position: fixed;
                             text-align: center;
                             -webkit-box-shadow: 0px 1px 3px 1px #5e5e5e;

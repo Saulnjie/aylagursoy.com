@@ -25,12 +25,25 @@ export default function Admin( {
   }, [])
 
 
+
+  
+  // const logout = document.querySelector('.logout');
+  // if (logout !== null) {
+  //   logout.onclick = function () {
+  //     localStorage.clear();
+  //     router.push('/')
+  //     return
+  //   };
+  // }
+
+
     return  <div className='main-container'>
      <header><Nav/></header>
      <h1 className=' text-3xl font-semibold text-zinc-900'>Admin page</h1>
      {jwt}
       <div className='token-contaier'>
         <p className='token-paragraph'>You are logged in</p>
+       <button className='logout logout-btn'>Logout</button>
         <p className='token-paragraph'></p>
       </div>
 
@@ -72,3 +85,4 @@ export async function getStaticProps() {
     },
   }
 }
+

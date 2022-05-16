@@ -62,10 +62,17 @@ margin-top: 10px;
 }
 
 
-/* hmmm wtf?
-.project-card-container:hover {
- color: yellow !important;
-  } */
+
+.project-card-container {
+    color: rgb(24 24 27);
+    
+}
+
+.card-title:hover,.project-card-container:hover {
+    color: rgb(82 82 91);
+  } 
+
+
 
 
 .nav-work-container {

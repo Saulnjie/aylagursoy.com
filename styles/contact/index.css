@@ -17,6 +17,7 @@
 
 .contact-name-input-container input {
     border: none;
+    border-radius: 4px;
     border-bottom: 1px solid gray;
 }
 
@@ -28,7 +29,9 @@ width: 50%;
 
 .contact-email-input-container input {
     border: none;
+    border-radius: 4px;
     border-bottom: 1px solid gray;
+    width: 100%;
 }
 
 .submit-message-container {

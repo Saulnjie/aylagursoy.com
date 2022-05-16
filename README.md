@@ -87,13 +87,17 @@ Video on deploying Strapi to Heroku
 ---
 
 Ting og fikse:
-bør værra lett:
+1-5 bør værra lett:
+6-8 kan værra morrro:
+10-99 er most likely imposible:
 
 1. Rydde opp i filene
 2. searchbar - Koblet input med livesearchen....
 3. Hva skjer med images? Grainy, og vrange
-4. hvordan får jeg <br/> i strapi?
-5. hamburger funker ikke bra
+4. hvordan får jeg <br/> i strapi? - list items
+5. hamburger funker ikke bra - GJØR RESPOSIVENESS
+6. lage breadcrums på product / eventuelt alle sider - bruke next routing på et vis?
 
-Hardshit: 2. implementere security 5. Post metode / contact form
-JWT er neste fiksa, se admin og loggin tsx
+7. skjer refreshen på admin uten jwt token for det er local host?
+8. Post metode
+9. hente inn messages og delete method (bør ikke være hardt)
