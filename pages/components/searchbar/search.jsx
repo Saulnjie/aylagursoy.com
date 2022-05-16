@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import liveSearch from "../../livesearch";
+import liveSearch from "../livesearcher/livesearch";
 
 const SearchBar = () => {
 
