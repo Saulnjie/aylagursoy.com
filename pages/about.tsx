@@ -4,7 +4,7 @@ import Image from 'next/image'
 import aboutimage from '../public/img/aboutprofile.jpg'
 import findStrapiElementById from './utils/strapiutil'
 import Nav from './components/navigation/navigation'
-import Contact from './contact'
+import Contact from './components/contacter/contact'
 import React from 'react';
 import Breadcrumbs from 'nextjs-breadcrumbs';
 
