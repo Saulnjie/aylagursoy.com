@@ -28,5 +28,6 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 25%;
+    max-height: 100vh;
 
 }
