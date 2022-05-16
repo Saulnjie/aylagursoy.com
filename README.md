@@ -86,7 +86,7 @@ Video on deploying Strapi to Heroku
 
 ---
 
-Ting og fikse:
+99 problems:
 1-5 bør værra lett:
 6-8 kan værra morrro:
 10-99 er most likely imposible:
