@@ -91,7 +91,7 @@ Ting og fikse:
 6-8 kan værra morrro:
 10-99 er most likely imposible:
 
-1. Rydde opp i filene
+1.
 2. searchbar - Koblet input med livesearchen....
 3. Hva skjer med images? Grainy, og vrange
 4. hvordan får jeg <br/> i strapi? - list items
