@@ -58,7 +58,7 @@ export default function Home({
               <Link  href={`/work/${product.id}`}>
                 <a className="project-card-container cards">
                   <div className='card-image-container'>
-                <Image objectFit='cover' layout="fill" height={400} width="100%" src={CMS_URL + product.attributes.coverImage.data.attributes.url} />
+                {/* <Image objectFit='cover' layout="fill" height={400} width="100%" src={CMS_URL + product.attributes.coverImage.data.attributes.url} /> */}
                 </div>
                 <h3 className="card-title text-xl font-semibold ">
                   {product.attributes.title}
