@@ -57,15 +57,13 @@ export default function Home({
             return (
               <Link  href={`/work/${product.id}`}>
                 <a className="project-card-container cards">
-                <Image src={"/img/mainbanner.jpg"} width={300} height={250} />
+                  <div className='card-image-container'>
+                <Image objectFit='cover' layout="fill" height={400} width="100%" src={CMS_URL + product.attributes.coverImage.data.attributes.url} />
+                </div>
                 <h3 className="card-title text-xl font-semibold ">
                   {product.attributes.title}
                 </h3>
                 <p className='card-description text-light'>{product.attributes.introDescription}</p>
-                <img className='test-img' height={400} width={400} src="${product.attributes.coverImage}"/>
-                 
-                {/* <div>{product.attributes.coverImage.data.attributes.formats.medium}</div> */}
-                
                 </a>
               </Link>
             )
