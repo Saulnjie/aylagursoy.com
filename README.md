@@ -91,13 +91,13 @@ Video on deploying Strapi to Heroku
 6-8 kan værra morrro:
 10-99 er most likely imposible:
 
-1.
+1. import nye bilder til Strapi
 2. searchbar - Koblet input med livesearchen....
-3. Hva skjer med images? Grainy, og vrange
+3. -
 4. hvordan får jeg <br/> i strapi? - list items
 5. hamburger kunne trengt mer styling
-6.
+6. skjer refreshen på admin uten jwt token for det er local host?
 
-7. skjer refreshen på admin uten jwt token for det er local host?
+7. Hva skjer med images - next js mulig?
 8. Post metode
 9. hente inn messages og delete method (bør ikke være hardt)
