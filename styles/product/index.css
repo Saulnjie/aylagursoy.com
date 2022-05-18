@@ -65,6 +65,7 @@
 width: 49%;
 background-color: lightcoral;
 height: 100%;
+position: relative;
 }
 
 .product-image-right-container {
@@ -77,15 +78,18 @@ height: 100%;
 }
 .product-image-one {
     height: 100%;
+    position: relative;
     background-color: rebeccapurple;
     width: 100%;
 }
 .product-image-two {
     height: 48%;
+    position: relative;
     background-color: bisque;
     width: 100%;
 }
 .product-image-three {
+    position: relative;
     height: 48%;
     background-color: red;
     width: 100%;
