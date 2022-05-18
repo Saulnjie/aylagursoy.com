@@ -55,7 +55,6 @@ export default function Product({
               <p className='product-mini-titles-text text-zinc-600 font-light text-sm leading-5'>{product.data.attributes.purchased}</p>
             </div>
           </div>
-
         </div>
 
       </div>
@@ -63,7 +62,8 @@ export default function Product({
       <p className='mt-6 text-zinc-900 font-bold text-lg'>Product Images</p>
       <div className='product-image-overall-container'>
         <div className='product-image-left-container'>
-          <div className='product-image-one'>${product.data.attributes.coverImage}</div>
+          {/* <img className='product-image-one' src={CMS_URL + ${product.data.attributes.coverImage}} >${product.data.attributes.coverImage}</img> */}
+          <div className='product-image-one' >${product.data.attributes.coverImage}</div>
         <Link href={`/work`}>
         <button className='back-btn'>Back</button>
         </Link>
