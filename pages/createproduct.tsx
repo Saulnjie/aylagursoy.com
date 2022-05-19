@@ -75,31 +75,26 @@ export default function Home({
     console.log(await response.json())
   }
   return (
-    <div className="fullwidth-container">
-      <div className="main-container flex-col">
-        {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
-        <main className="flex min-h-screen flex-col items-center justify-center py-2 ">
+    <div>
+        <main className="main-container">
+     
           <header className="w-max">
             <Nav />
           </header>
           <div className="bcrums-container">
             <Crums />
           </div>
-          <h1 className="text-2xl	font-bold text-zinc-900">About my projects</h1>
+    <div className="fullwidth-container">
+      </div>
+    
+          <h1 className="text-2xl	font-bold text-zinc-900">Create product</h1>
           <p className="about-paragraph w-2/3 flex-1 text-base text-zinc-600">
-            I'm baby woke before they sold out pug, art party migas heirloom
-            cardigan keytar shaman. Dreamcatcher distillery sriracha chartreuse
-            man braid. Photo booth hoodie cliche, post-ironic pork belly hexagon
-            craft beer bespoke occupy next level hell of. Single-origin coffee
-            post-ironic shaman fashion axe lumbersexual
+            This is the section you can upload your own projects and work. This will automatically be implemented to your website.
           </p>
-          <div className="all-products-container grid grid-cols-4 gap-5">
-            <div className="project-card-container">
-              <Image src={mainImage} width={250} height={250} />
-              <h3 className="text-xl font-semibold text-zinc-900">The Donut</h3>
-              <p>1</p>
-            </div>
-          </div>
+     
+
+
+
           <form onSubmit={form.handleSubmit(onSubmit)}>
             <div>
               <label htmlFor="title">Title</label>
@@ -134,12 +129,15 @@ export default function Home({
               <input type="text" {...form.register('purchased')} />
             </div>
 
-            <button type="submit">Submit</button>
+            <button type="submit" className='submit-btn'>Submit</button>
           </form>
+
+
           <footer></footer>
+    
         </main>
+    
       </div>
-    </div>
   )
 }
 

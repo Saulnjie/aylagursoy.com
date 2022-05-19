@@ -15,7 +15,6 @@ const Crums = () => {
   return <Breadcrumbs useDefaultStyle transformLabel={(title) => title + ''} />
 }
 
-// Her blir det if jwt token - så render dette : Om ikke så redirect I guess
 
 export default function Home({
   messages,
@@ -33,6 +32,7 @@ export default function Home({
 
     setJwt(jwt)
   }, [])
+
 
   return (
     <div>
@@ -59,6 +59,7 @@ export default function Home({
                 <span className="message-name text-zinc-900 font-semibold">Message from: {message.attributes.name}</span>
                 <p className='actual-message text-zinc-900 font-normal'>{message.attributes.message}</p>
                 <button className='delete-btn'>Delete</button>
+                <p className='message-created text-sm text-zinc-900 font-light'>{message.attributes.createdAt}</p>
                 </div>
               </div>
             )
