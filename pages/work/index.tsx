@@ -58,7 +58,7 @@ export default function Home({
               <Link  href={`/work/${product.id}`}>
                 <a className="project-card-container cards">
                   <div className='card-image-container'>
-                  <Image src={CMS_URL + product.attributes.coverImage.data.attributes.url} objectFit='cover' layout="fill" height={400} width="100%"  />
+                  <Image src={CMS_URL + product.attributes.coverImage.data.attributes.url} objectFit='cover' layout="fill" className="object-[50%_50%]" />
                   </div>
                 <h3 className="card-title text-xl font-semibold ">
                   {product.attributes.title}
@@ -77,7 +77,7 @@ export default function Home({
 }
 
 export async function getStaticProps() {
-  const response = await fetch(`${CMS_URL}/api/products?populate=*?`)
+  const response = await fetch(`${CMS_URL}/api/products?populate=*`)
 
   if (!response.ok) {
     throw new Error(await response.text())

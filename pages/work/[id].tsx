@@ -68,7 +68,7 @@ export default function Product({
       <p className='mt-6 text-zinc-900 font-bold text-lg'>Product Images</p>
       <div className='product-image-overall-container'>
         <div className='product-image-left-container'>
-          <Image objectFit='cover' layout="fill" src={CMS_URL + product.data.attributes.coverImage.data.attributes.url} />
+          <Image objectFit='cover' layout="fill" className="object-[50%_50%]" src={CMS_URL + product.data.attributes.coverImage.data.attributes.url} />
           {/* <div className='product-image-one' >${product.data.attributes.coverImage}</div> */}
         <Link href={`/work`}>
         <button className='back-btn'>Back</button>
@@ -76,12 +76,12 @@ export default function Product({
         </div>
         <div className='product-image-right-container'>
           <div className='product-image-two'>
-         <Image layout="fill"objectFit='cover'src={CMS_URL + product.data.attributes.additionalImages.data[1].attributes.url} />
+         <Image layout="fill" objectFit='cover' className="object-[50%_50%]" src={CMS_URL + product.data.attributes.additionalImages.data[1].attributes.url} />
           </div>
           <div className='product-image-three'>
           <Image layout="fill"
             objectFit='cover'
-            className="object-[50%_80%]"
+            className="object-[50%_50%]"
             src={CMS_URL + product.data.attributes.additionalImages.data[2].attributes.url} 
           />
           </div>

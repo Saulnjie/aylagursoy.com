@@ -56,7 +56,6 @@
 
 .product-image-overall-container {
     display: flex;
-    background-color:beige;
     height: 100%;
     flex-direction: row;
     justify-content: space-between;
@@ -64,14 +63,12 @@
 
 .product-image-left-container {
 width: 49%;
-background-color: lightcoral;
 height: 100%;
 position: relative;
 }
 
 .product-image-right-container {
 width: 49%;
-background-color: aliceblue;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -80,19 +77,16 @@ height: 100%;
 .product-image-one {
     height: 100%;
     position: relative;
-    background-color: rebeccapurple;
     width: 100%;
 }
 .product-image-two {
     height: 48%;
     position: relative;
-    background-color: bisque;
     width: 100%;
 }
 .product-image-three {
     position: relative;
     height: 48%;
-    background-color: red;
     width: 100%;
 }
 
