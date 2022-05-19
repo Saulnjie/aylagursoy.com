@@ -98,4 +98,5 @@ Video on deploying Strapi to Heroku
 5. hamburger kunne trengt mer styling
 6. skjer refreshen på admin uten jwt token for det er local host?
 
-
+fikse images
+gå over alle roles i strapi for safety

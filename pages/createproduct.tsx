@@ -1,5 +1,7 @@
 import type { InferGetStaticPropsType } from 'next'
 import { ProductsResponse } from '../types/products-response'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import Image from 'next/image'
 import mainImage from '../public/img/mainbanner.jpg'
 import Nav from './components/navigation/navigation'
@@ -25,6 +27,20 @@ const Crums = () => {
 export default function Home({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const [jwt, setJwt] = useState('')
+  const router = useRouter()
+
+  useEffect(() => {
+    const jwt = sessionStorage.getItem('jwt')
+
+    if (!jwt) {
+      router.push('/')
+      return
+    }
+
+    setJwt(jwt)
+  }, [])
+
   const form = useForm<FormValues>()
   const onSubmit = async (values: FormValues) => {
     const form = new FormData()

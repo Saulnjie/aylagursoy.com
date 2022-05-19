@@ -1,6 +1,9 @@
 import type { InferGetStaticPropsType } from 'next'
 import { ProductsResponse } from '../types/products-response'
 import Nav from './components/navigation/navigation'
+import Image from 'next/image'
+import { CMS_URL } from '../consts'
+import mainBanner from '../public/img/mainbanner.jpg'
 
 
 
@@ -11,7 +14,8 @@ export default function Home({
   return (
     <body>
       <div className='hero-image-container'>
-    <div className='fullscreen-container flex-col' >
+      <Image objectFit='cover' layout="fill" className="object-[50%_50%]" src={mainBanner} />
+    <div className='fullscreen-container' >
         <div className="nav-work-container py-2">
         <header><Nav/></header>
         </div>
@@ -28,8 +32,23 @@ export default function Home({
   )
 }
 
+// export async function getStaticProps() {
+//   const response = await fetch('http://localhost:1337/api/products')
+
+//   if (!response.ok) {
+//     throw new Error(await response.text())
+//   }
+
+//   const products: ProductsResponse = await response.json()
+//   return {
+//     props: {
+//       products: products.data,
+//     },
+//   }
+// }
+
 export async function getStaticProps() {
-  const response = await fetch('http://localhost:1337/api/products')
+  const response = await fetch(`${CMS_URL}/api/products?populate=*`)
 
   if (!response.ok) {
     throw new Error(await response.text())
