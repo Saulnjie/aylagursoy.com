@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import mainImage from '../public/img/mainbanner.jpg'
 import Nav from './components/navigation/navigation'
+import Adminnav from './components/navigation/adminnav'
 import React from 'react'
 import Breadcrumbs from 'nextjs-breadcrumbs'
 import { useForm } from 'react-hook-form'
@@ -79,7 +80,7 @@ export default function Home({
         <main className="main-container">
      
           <header className="w-max">
-            <Nav />
+            <Adminnav />
           </header>
           <div className="bcrums-container">
             <Crums />

@@ -7,6 +7,7 @@ import mainBanner from '../public/img/mainbanner.jpg'
 
 
 
+
 export default function Home({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {

@@ -6,6 +6,7 @@ import Image from 'next/image'
 import type { InferGetStaticPropsType } from 'next'
 import { ProductsResponse } from '../types/products-response'
 import Nav from './components/navigation/navigation'
+import Adminnav from './components/navigation/adminnav'
 import React from 'react';
 import Breadcrumbs from 'nextjs-breadcrumbs';
 
@@ -50,20 +51,15 @@ export default function Admin( {
 
 
     return  <div className='main-container'>
-     <header><Nav/></header>
+     {/* <header><Nav/></header> */}
+     <header className='py-2'><Adminnav/></header>
      <div className='bcrums-container flex flex-row justify-between'>
      <h1 className=' text-3xl font-semibold text-zinc-900'>Admin page</h1>
      <Crums/>
      </div>
-     {jwt}
+     {/* {jwt} */}
         <p className='token-paragraph'>You are logged in</p>
       <div className='token-contaier'>
-      <Link href={`/admininbox`}>
-       <button className='inbox-btn'>Inbox</button>
-       </Link>
-       <Link href={`/createproduct`}>
-        <button className='create-product-btn'>Create</button>
-        </Link>
         <Link href={`/`}>
        <button className='logout logout-btn'>Logout</button>
        </Link>

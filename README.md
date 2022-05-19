@@ -100,3 +100,4 @@ Video on deploying Strapi to Heroku
 
 fikse images
 gå over alle roles i strapi for safety
+RESPONSIVENESS

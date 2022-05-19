@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 import Nav from './components/navigation/navigation'
 import { renderToHTML } from 'next/dist/server/render'
 import { detectContentType } from 'next/dist/server/image-optimizer'
+import Adminnav from './components/navigation/adminnav'
 import React from 'react'
 import Breadcrumbs from 'nextjs-breadcrumbs'
 import { MessagesResponse } from '../types/messages-response'
@@ -41,7 +42,7 @@ export default function Home({
     <div className="fullwidth-container">
       <div className="nav-work-container py-2">
         <header>
-          <Nav />
+       <Adminnav/>
         </header>
       </div>
     </div>
