@@ -108,3 +108,32 @@ export async function getStaticProps() {
   }
 }
 
+
+
+
+// logout theory 
+// const strapiAccessToken = localStorage.getItem("strapi-access-token")
+// const form = document.querySelector("#create-album-form")
+
+
+// const loginButton = document.querySelector(".login_button")
+// const logoutButton = document.querySelector(".logout_button")
+
+// if (!strapiAccessToken) {
+//   console.log('There is no JWT token');
+//   alert("You are not a cerified superuser. Press OK to redirect!");
+//   window.location.replace("/login.html")
+// }
+
+
+// logoutButton.onclick = () => {
+//   localStorage.removeItem("strapi-access-token")
+//   window.location.replace("/")
+// }
+
+
+// if (strapiAccessToken) {
+//   loginButton.style.display = "none";
+// } else {
+//   logoutButton.style.display = "none";
+// }
