@@ -1,3 +1,20 @@
 .all-messages-container {
-    background-color: ;
+
+}
+
+.single-message-container {
+    margin-bottom: 20px;
+    border-bottom: 1px black solid;
+}
+
+.message-name {
+
+}
+
+.actual-message {
+
+}
+.inbox-subtitle {
+    margin-bottom: 20px;
+    
 }
