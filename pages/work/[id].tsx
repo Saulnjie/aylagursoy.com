@@ -70,9 +70,6 @@ export default function Product({
         <div className='product-image-left-container'>
           <Image objectFit='cover' layout="fill" className="object-[50%_50%]" src={CMS_URL + product.data.attributes.coverImage.data.attributes.url} />
           {/* <div className='product-image-one' >${product.data.attributes.coverImage}</div> */}
-        <Link href={`/work`}>
-        <button className='back-btn'>Back</button>
-        </Link>
         </div>
         <div className='product-image-right-container'>
           <div className='product-image-two'>
@@ -87,6 +84,9 @@ export default function Product({
           </div>
         </div>
       </div>
+        <Link href={`/work`}>
+            <button className='back-btn'>Back</button>
+        </Link>
     <footer></footer>
     </main>
   </div>
