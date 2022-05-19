@@ -16,6 +16,7 @@ const Crums = () => {
 }
 
 
+
 export default function Home({
   messages,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
