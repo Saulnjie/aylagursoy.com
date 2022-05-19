@@ -34,7 +34,7 @@ export default function Home({
           </div>
           {messages.data.map(message => {
             return (
-              <div className="mb-4"  key={message.id}>
+              <div className="all-messages-container"  key={message.id}>
                 <span className="block">New message from: {message.attributes.name}</span>
                 <p>{message.attributes.message}</p>
               </div>

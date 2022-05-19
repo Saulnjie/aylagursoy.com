@@ -9,6 +9,7 @@
 @import './login/index.css';
 @import './product/index.css';
 @import './admin/index.css';
+@import './admin/inbox.css';
 @import './contact/index.css';
 @import './product/create-product.css';
 
@@ -77,6 +78,26 @@ footer {
 }
 
 .logout-btn {
+  background-color: rgb(28 25 23);;
+  color: white;
+  width: 150px;
+  height: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.create-product-btn {
+  background-color: rgb(28 25 23);;
+  color: white;
+  width: 150px;
+  height: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.inbox-btn {
   background-color: rgb(28 25 23);;
   color: white;
   width: 150px;

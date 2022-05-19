@@ -33,7 +33,10 @@ export default function Product({
     {/* <div className="nav-work-container py-2"> */}
       <header className='py-2'><Nav/></header>
       {/* </div> */}
-      <div className='product-banner-container'><h2 className='text-zinc-50 font-semibold'>{product.data.attributes.title}</h2></div>
+      <div className='product-banner-container'>
+      {/* <Image objectFit='cover' layout="fill" src={CMS_URL + product.data.attributes.coverImage.data.attributes.url} /> */}
+        <h2 className='text-zinc-50 font-semibold'>{product.data.attributes.title}</h2>
+      </div>
         {/* <p className='img-test'>Viewing product: {product.data.attributes.coverImage}</p> */}
 
         <div className='bcrums-container'>

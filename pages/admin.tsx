@@ -56,10 +56,17 @@ export default function Admin( {
      <Crums/>
      </div>
      {jwt}
-      <div className='token-contaier'>
         <p className='token-paragraph'>You are logged in</p>
+      <div className='token-contaier'>
+      <Link href={`/admininbox`}>
+       <button className='inbox-btn'>Inbox</button>
+       </Link>
+       <Link href={`/createproduct`}>
+        <button className='create-product-btn'>Create</button>
+        </Link>
+        <Link href={`/`}>
        <button className='logout logout-btn'>Logout</button>
-        <p className='token-paragraph'></p>
+       </Link>
       </div>
 
        <h2 className='text-lg	text-zinc-900 font-bold'>These are all your posted products and articles</h2>
