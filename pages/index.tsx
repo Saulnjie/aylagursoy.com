@@ -20,12 +20,11 @@ export default function Home({
         <div className="nav-work-container py-2">
         <header><Nav/></header>
         </div>
-        <main className="main-container min-h-screen py-2">
-      <h1 className='hero-paragraph text-2xl	text-zinc-900 font-bold font-light flex justify-center '>Bergen based designer. <br/>
-      Works in varius fields of design with focus on the meeting <br/>between form, materials and humans.</h1>
-      {/* <p className='flex-1 w-2/3' >{products[2].attributes.description}</p> */}
-      
-      {/* <footer>This is Foot</footer> */}
+      <main className="main-container py-2">
+        <div className='hero-paragraph'>
+        <h1 className='text-2xl	text-zinc-900 font-bold font-light'>Bergen based designer. <br/>
+        Works in varius fields of design with focus on the meeting <br/>between form, materials and humans.</h1>
+        </div>
       </main>
       </div>
       </div>
