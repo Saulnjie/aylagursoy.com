@@ -29,13 +29,13 @@ export default function Product({
   product,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return <div className='fullscreen-container'>
-    <main className='main-container'>
+    <main className='main-container-special'>
     {/* <div className="nav-work-container py-2"> */}
       <header className='py-2'><Nav/></header>
       {/* </div> */}
       <div className='product-banner-container'>
-      {/* <Image objectFit='cover' layout="fill" src={CMS_URL + product.data.attributes.coverImage.data.attributes.url} /> */}
-        <h2 className='text-zinc-50 font-semibold'>{product.data.attributes.title}</h2>
+      <Image objectFit='cover' layout="fill" src={CMS_URL + product.data.attributes.coverImage.data.attributes.url} />
+        <h2 className='product-hero-title text-zinc-50 font-semibold'>{product.data.attributes.title}</h2>
       </div>
         {/* <p className='img-test'>Viewing product: {product.data.attributes.coverImage}</p> */}
 

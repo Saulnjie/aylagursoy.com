@@ -14,7 +14,6 @@
 } */
 
 .hero-image-container {
-    display: flex;
     width: 100%;
     /* background-image:url(../../public/img/mainbanner.jpg); */
     background-size: cover;
@@ -28,7 +27,7 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 25%;
-    max-height: 100vh;
+    /* max-height: 100vh; */
     z-index: 1;
 
 }
