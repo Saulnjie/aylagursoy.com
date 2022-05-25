@@ -16,27 +16,43 @@ const Crums = () => {
     useDefaultStyle
     transformLabel={(title) => title + ''}
     />
-  );
-};
-
-
-export default function Admin( {
-  products,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
-  const [jwt, setJwt] = useState('')
-  const router = useRouter()
-
-  useEffect(() => {
-    const jwt = sessionStorage.getItem('jwt')
-
-    if (!jwt) {
-      router.push('/')
-      return
-    }
-
-    setJwt(jwt)
-  }, [])
-
+    );
+  };
+  
+  
+  
+  
+  export default function Admin( {
+    products,
+  }: InferGetStaticPropsType<typeof getStaticProps>) {
+    const [jwt, setJwt] = useState('')
+    const router = useRouter()
+    
+    useEffect(() => {
+      const jwt = sessionStorage.getItem('jwt')
+      
+      if (!jwt) {
+        router.push('/')
+        return
+      }
+      
+      setJwt(jwt)
+    }, [])
+    
+    async function deleteThing(id: number) {
+      let response= await fetch(
+      `${CMS_URL}/api/products/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${jwt}`,
+        },
+      }
+    );
+    const data = await response.json();
+    console.log(data)
+    router.replace(router.asPath);
+  }
 
 
   
@@ -69,17 +85,29 @@ export default function Admin( {
      <div className="all-products-container cards grid grid-cols-4 gap-5">
           {products.map((product) => {
             return (
+              <div>
               <Link  href={`/work/${product.id}`}>
                 <a className="project-card-container cards">
                 <Image src={"/img/mainbanner.jpg"} width={300} height={250} />
                 <h3 className="text-xl font-semibold text-zinc-600">
                   {product.attributes.title}
                 </h3>
-                <button className='delete-btn'>Delete</button>
-                {/* <p className='text-zinc-600 text-light'>{product.attributes.introDescription}</p> */}
-                {/* <img className='test-img' src="${product.attributes.coverImage}"/> */}
                 </a>
               </Link>
+                <button onClick={() => {
+                          console.log(jwt);
+                          let deleteProd = confirm(
+                            `are you sure you want to delete this product?`
+                          );
+                     
+
+                          if (deleteProd) {
+                            deleteThing(product.id);
+                          }
+                        }} className='delete-btn'>Delete</button>
+                {/* <p className='text-zinc-600 text-light'>{product.attributes.introDescription}</p> */}
+                {/* <img className='test-img' src="${product.attributes.coverImage}"/> */}
+              </div>
             )
           })}
         </div>

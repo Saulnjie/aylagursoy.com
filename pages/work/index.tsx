@@ -17,9 +17,17 @@ const Crums = () => {
   );
 };
 
+type MyLoaderProps = {
+  src: string,
+  width: number,
+  quality: number
+}
+
+
 export default function Home({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  console.log(process.env.NEXT_PUBLIC_CMS_URL)
   return (
         <div className="fullwidth-container">
     <div className="nav-work-container py-2">
@@ -54,11 +62,13 @@ export default function Home({
 
         <div className="all-products-container cards grid grid-cols-4 gap-5">
           {products.map((product) => {
+            console.log('image :', process.env.NEXT_PUBLIC_CMS_URL + product.attributes.coverImage.data.attributes.url)
+            const imageUrl = process.env.NEXT_PUBLIC_CMS_URL + product.attributes.coverImage.data.attributes.url
             return (
-              <Link  href={`/work/${product.id}`}>
+              <Link key={product.id} href={`/work/${product.id}`}>
                 <a className="project-card-container cards">
                   <div className='card-image-container'>
-                  <Image src={CMS_URL + product.attributes.coverImage.data.attributes.url} objectFit='cover' layout="fill" className="object-[50%_50%]" />
+                  <img src={imageUrl}  className="object-[50%_50%]" />
                   </div>
                 <h3 className="card-title text-xl font-semibold ">
                   {product.attributes.title}
