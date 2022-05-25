@@ -3,6 +3,34 @@ import liveSearch from "../livesearcher/livesearch";
 
 const SearchBar = () => {
 
+
+// Legg inn arrayet her
+
+// const Projects = ({ product})
+//     const [hotels, setHotels] = useState("");
+//     const [query, setQuery] = useState("");
+  
+//     const handleOnSearch = (event) => {
+//       event.preventDefault();
+//       setHotels(event.target.value);
+//     };
+  
+//     const handleSearch = (event) => {
+//       event.preventDefault();
+//       setQuery(event.target.value);
+//     };
+  
+//     const filterHotels = () => {
+//       return hotel.filter(
+//         (hotel) =>
+//           hotel.name.toLowerCase().indexOf(query.toLocaleLowerCase()) > -1
+//       );
+//     };
+
+
+// Over dette er searchbar 
+
+
     const clickPoint = useRef();
     const handleFocus = () => {
         clickPoint.current.style.display = "none";
@@ -26,6 +54,7 @@ const SearchBar = () => {
                     onBlur={handleBlur}
                     // oninput="liveSearch()"
                     id="searchbox"
+                    // onChange={(event) => handleOnSearch(event)}
                 />
             </div>
         </div>
