@@ -99,8 +99,6 @@ const Crums = () => {
                           let deleteProd = confirm(
                             `are you sure you want to delete this product?`
                           );
-                     
-
                           if (deleteProd) {
                             deleteThing(product.id);
                           }

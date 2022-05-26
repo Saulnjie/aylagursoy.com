@@ -50,7 +50,7 @@ export default function Product({
 
         <div className='product-info-right-container'>
           <h3 className='product-subtitles mb-1 text-zinc-900 font-bold text-lg'>Details</h3>
-          <p className='product-description text-zinc-600 font-light text-base leading-7'>Viewing product: {product.data.attributes.title}</p>
+          <p className='product-description text-zinc-600 font-light text-base leading-7'>{product.data.attributes.title}</p>
           <div className='product-additional-info-container mt-8'>
             <div className='addition-production-info'>
               <h4 className='product-mini-titles mb-1 text-zinc-900 font-bold text-base'>Prototype</h4>

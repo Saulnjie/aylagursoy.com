@@ -11,6 +11,7 @@ import Adminnav from './components/navigation/adminnav'
 import React from 'react'
 import Breadcrumbs from 'nextjs-breadcrumbs'
 import { MessagesResponse } from '../types/messages-response'
+import { CMS_URL } from '../consts'
 
 const Crums = () => {
   return <Breadcrumbs useDefaultStyle transformLabel={(title) => title + ''} />
@@ -34,6 +35,21 @@ export default function Home({
 
     setJwt(jwt)
   }, [])
+
+  async function deleteThing(id: number) {
+    let response= await fetch(
+    `${CMS_URL}/api/messages/${id}`,
+    {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${jwt}`,
+      },
+    }
+  );
+  const data = await response.json();
+  console.log(data)
+  router.replace(router.asPath);
+}
 
 
   return (
@@ -60,7 +76,17 @@ export default function Home({
                 <div className='single-message-container'>
                 <span className="message-name text-zinc-900 font-semibold">Message from: {message.attributes.name}</span>
                 <p className='actual-message text-zinc-900 font-normal'>{message.attributes.message}</p>
-                <button className='delete-btn'>Delete</button>
+                <button onClick={() => {
+                          console.log(jwt);
+                          let deleteProd = confirm(
+                            `are you sure you want to delete this product?`
+                          );
+                     
+
+                          if (deleteProd) {
+                            deleteThing(message.id);
+                          }
+                        }} className='delete-btn'>Delete</button>
                 <p className='message-created text-sm text-zinc-900 font-light'>{message.attributes.createdAt}</p>
                 </div>
               </div>

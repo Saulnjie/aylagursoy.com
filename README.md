@@ -91,13 +91,10 @@ Video on deploying Strapi to Heroku
 6-8 kan værra morrro:
 10-99 er most likely imposible:
 
-1. import nye bilder til Strapi (kanskje ikke nødvendig)
+1. import nye bilder til Strapi (kanskje ikke nødvendig) -via netlify?
 2. searchbar - Koblet input med livesearchen....
-3. delete method
+3. responsiveness
 4. hvordan får jeg <br/> i strapi? - list items
 5. hamburger kunne trengt mer styling
-6. skjer refreshen på admin uten jwt token for det er local host?
-
-fikse images
-gå over alle roles i strapi for safety
-RESPONSIVENESS
+6. skjer refreshen på admin uten jwt token for det er local host? - feil måte og loade på!
+7. gå over alle roles i strapi for safety
