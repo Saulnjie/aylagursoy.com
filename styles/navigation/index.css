@@ -57,6 +57,7 @@
   justify-content: center;
   justify-items: center;
   /* margin: auto; */
+
 }
 
 
@@ -107,6 +108,7 @@
       }
       .navigation {
         flex-direction: row;
+        align-items: center;
       }
       .nav_container {
         display: flex;
@@ -118,10 +120,12 @@
         padding: 0%;
         justify-content: space-between;
     }
-   
+
     .logo_nav_container {
         padding-top: 0.3rem;
         padding-right: 1rem;
+        height: 30px;
+        background-size: cover;
     }
 }
 

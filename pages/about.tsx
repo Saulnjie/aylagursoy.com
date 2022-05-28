@@ -29,7 +29,7 @@ export default function Home({
         <div className='bcrums-container'>
         <Crums/>
         </div>
-        <main className="flex min-h-screen  py-2">
+        <main className="overall-about flex min-h-screen  py-2">
         <div className='left-about-container flex-col'>
         {/* <pre>{JSON.stringify(products, null, 2)}</pre> */}
         <h1 className='text-2xl	text-zinc-900 font-bold'>About</h1>

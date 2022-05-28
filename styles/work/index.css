@@ -13,33 +13,11 @@
     margin: auto;
 }  
 
-/* 2 av samme css styles med forskjellige classes - usikker på layout  */
-/* .fullwidth-container {
-    display: flex;
-    width: 100%;
-    height: 100%; 
-    margin: auto;
-}
-
-.fullscreen-container {
-    width: 100%;
-    height: 50vh;
-    background-image:url(../../public/img/coatedbackground.jpg);
-    background-size: cover;
-    background-position: center 100%;
-}  */
-/* ------- */
 
 .nav-wrapper {
     width: 80%;
 }
 
-/* .main-container {
-    display: flex;
-    flex-direction: column;
-    width: 66%;
-    margin: auto;
-} */
 
 .hero-page-title {
     margin: auto;
@@ -86,4 +64,22 @@ margin-top: 10px;
 .test-img {
     width: 100px;
     height: 100px;
+}
+
+
+@media (max-width: 767px) {  
+    .searchbar-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 5%;
+    }
+    
+    .all-products-container {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        padding-bottom: 10%;
+    }
+
 }
