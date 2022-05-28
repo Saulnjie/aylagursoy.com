@@ -104,4 +104,7 @@
         margin-left: auto;
     }
     
+    .contact-name-input-container input {
+        max-width: 90%;
+    }
 }

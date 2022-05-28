@@ -35,8 +35,8 @@
 
 @media (max-width: 767px) { 
     .hero-paragraph {
-        margin-top: 50%;
-        width: 60%;
+        margin-top: 20%;
+        width: 100%;
     }
 
     .hero-image-container {

@@ -4,6 +4,7 @@ import Nav from './components/navigation/navigation'
 import Image from 'next/image'
 import { CMS_URL } from '../consts'
 import mainBanner from '../public/img/mainbanner.jpg'
+import mainBannertwo from '../public/img/coatedbackground.jpg'
 
 
 
