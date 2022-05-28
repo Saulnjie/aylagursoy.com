@@ -172,6 +172,10 @@ height: 100%;
         width: 100%;
         position: relative;
     }
+
+    .product-additional-info-container {
+        flex-direction: column;
+    }
 }
 
 

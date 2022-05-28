@@ -45,7 +45,7 @@ export default function Product({
     <div className='product-info-overall-container'>
         <div className='product-info-left-container'>
           <h3 className='product-subtitles mb-1 text-zinc-900 font-bold text-lg'>About this project</h3>
-          <p className='product-description text-zinc-600 font-normal text-base leading-7'>{product.data.attributes.description}</p>
+          <p className='product-description mb-8 text-zinc-600 font-normal text-base leading-7'>{product.data.attributes.description}</p>
         </div>
 
         <div className='product-info-right-container'>
@@ -54,7 +54,7 @@ export default function Product({
           <div className='product-additional-info-container mt-8'>
             <div className='addition-production-info'>
               <h4 className='product-mini-titles mb-1 text-zinc-900 font-bold text-base'>Prototype</h4>
-              <p className='product-mini-titles-text text-zinc-600 font-light text-sm leading-5'>{product.data.attributes.specifications}</p>
+              <p className='product-mini-titles-text mb-2 text-zinc-600 font-light text-sm leading-5'>{product.data.attributes.specifications}</p>
             </div>
             <div className='addition-production-info text-zinc-900'>
               <h4 className='product-mini-titles mb-1 font-bold text-base'>Purchase</h4>
