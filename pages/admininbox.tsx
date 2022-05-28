@@ -79,7 +79,7 @@ export default function Home({
                 <button onClick={() => {
                           console.log(jwt);
                           let deleteProd = confirm(
-                            `are you sure you want to delete this product?`
+                            `Are you sure you want to delete this message?`
                           );
                      
 
