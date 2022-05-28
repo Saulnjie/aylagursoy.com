@@ -1,10 +1,6 @@
 import Hamburger from '../navigation/burger';
 import { useState } from 'react';
-// import logo from '../../../public/localmedia/LogoNav.png';
 import Image from 'next/image';
-// import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Link from 'next/link';
 import logo from '../../../public/img/logoption.png'
 import SearchBar from '../searchbar/search';
@@ -21,6 +17,11 @@ export default function Nav() {
 			<div className='nav_container'>
 				<div className='navigation'>
 					<ul>
+						{/* <li>
+							<Link activeClassName='active' href='/'>
+								<a>Home</a>
+							</Link>
+						</li> */}
 						<li>
 							<Link activeClassName='active' href='/about'>
 								<a>About</a>
