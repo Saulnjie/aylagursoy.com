@@ -11,37 +11,12 @@ let fuse: Fuse<unknown>
 export default function Searchbar({items,setItems}: Props){
 
 
-// Legg inn arrayet her
-
-// const Projects = ({ product})
-//     const [hotel{items, setItems}:Propss, setHotels] = useState("");
-
 useEffect(() => {
     console.log("ITEMS",items)
     fuse = new Fuse(items, {
         keys: ["attributes.title"]
     })
-},[])//     const [query, setQuery] = useState("");
-  
-//     const handleOnSearch = (event) => {
-//       event.preventDefault();
-//       setHotels(event.target.value);
-//     };
-  
-//     const handleSearch = (event) => {
-//       event.preventDefault();
-//       setQuery(event.target.value);
-//     };
-  
-//     const filterHotels = () => {
-//       return hotel.filter(
-//         (hotel) =>
-//           hotel.name.toLowerCase().indexOf(query.toLocaleLowerCase()) > -1
-//       );
-//     };
-
-
-// Over dette er searchbar 
+},[])
 
 const handleSearch = (query: string) => {
     const items = fuse.search(query)
@@ -58,7 +33,6 @@ const handleSearch = (query: string) => {
                     type="text"
                     className="block p-2 pl-10 w-70 text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
                     placeholder="Search Here..."
-                    // oninput="liveSearch()"
                     id="searchbox"
                     onChange={(event) => handleSearch(event.target.value)}
                 />
