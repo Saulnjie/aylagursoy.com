@@ -55,8 +55,9 @@ export default function Login() {
         </div> */}
     <form onSubmit={handleSubmit}>
       {error && <span className="text-red-700">Error: {error}</span>}
+      <h2 className='login-subtitle text-lg text-zinc-900 font-bold'>Login to your admin user here</h2>
       <div className='email-input'>
-        <label className="block" htmlFor="email">
+        <label className="block text-md text-zinc-600" htmlFor="email">
           Email
         </label>
         <input
@@ -74,7 +75,7 @@ export default function Login() {
         />
       </div>
       <div className='password-input'>
-        <label htmlFor="password" className="block">
+        <label htmlFor="password" className="block text-md text-zinc-600">
           Password
         </label>
         <input

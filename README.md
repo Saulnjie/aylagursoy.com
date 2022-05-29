@@ -91,7 +91,10 @@ Video on deploying Strapi to Heroku
 6-8 kan værra morrro:
 10-99 er most likely imposible:
 
-Deploy, search?, feil på create og modal for work/id
+Deploy, search?, feil på create pga bilder?, fixed på logo?
+jwt clear
+
+modal for work/id
 
 1. import nye bilder til Strapi (kanskje ikke nødvendig) -via netlify?
 2. searchbar - Koblet input med livesearchen....
