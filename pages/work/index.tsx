@@ -47,11 +47,12 @@ export default function Home({
           About my projects
         </h2>
         <p className="about-work-paragraph w-3/3 text-light text-zinc-600">
-          I'm baby woke before they sold out pug, art party migas heirloom
-          cardigan keytar shaman. Dreamcatcher distillery sriracha chartreuse
-          man braid. Photo booth hoodie cliche, post-ironic pork belly hexagon
-          craft beer bespoke occupy next level hell of. Single-origin coffee
-          post-ironic shaman fashion axe lumbersexual
+        My focus as a designer and interior designer (graduated June, 2022) is in the meeting between
+form, materiality and human. I am driven by my curiosity to the design field, all the way down to the level of detail.
+My approach to the subject is guided by working alternately with digital and practical methods. Indesign,
+photoshop and modeling software such as digital tools and sketching, mock ups and reflection
+as practical, which together provide an innovative search for new solutions. Keywords that occupy
+me in all projects I participate in are: tactility, contrasts, composition and accuracy.
         </p>
 
         <div className="all-products-container cards grid grid-cols-4 gap-5">

@@ -59,7 +59,7 @@ export default function Product({
       <div className='product-image-overall-container'>
         <div className='product-image-left-container'>
           <div className='product-image-one' >
-          <Image objectFit='cover' layout="fill" className="object-[50%_50%]" src={CMS_URL + product.data.attributes.coverImage.data.attributes.url} />
+          <Image objectFit='cover' layout="fill" className="object-[50%_50%]" src={CMS_URL + product.data.attributes.additionalImages.data[0].attributes.url} />
           </div>
         </div>
         <div className='product-image-right-container'>
