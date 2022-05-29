@@ -1,27 +1,11 @@
 import { useEffect, useRef } from "react";
-import Fuse from "fuse.js"
 
 interface Props {
-    items: any[]
-    setItems: (items: any[]) => void
+    onChange: (q: string) => void
 }
 
-let fuse: Fuse<unknown>
+export default function Searchbar({onChange}: Props){
 
-export default function Searchbar({items,setItems}: Props){
-
-
-useEffect(() => {
-    console.log("ITEMS",items)
-    fuse = new Fuse(items, {
-        keys: ["attributes.title"]
-    })
-},[])
-
-const handleSearch = (query: string) => {
-    const items = fuse.search(query)
-    setItems(items)
-}
 
      return (
         <div className="items-center flex justify-left" >
@@ -34,7 +18,7 @@ const handleSearch = (query: string) => {
                     className="block p-2 pl-10 w-70 text-gray-900 bg-gray-50 rounded-lg border border-gray-300"
                     placeholder="Search Here..."
                     id="searchbox"
-                    onChange={(event) => handleSearch(event.target.value)}
+                    onChange={(event) => onChange(event.target.value)}
                 />
             </div>
         </div>
