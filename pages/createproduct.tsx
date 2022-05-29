@@ -149,7 +149,7 @@ export default function Home({
 }
 
 export async function getStaticProps() {
-  const response = await fetch(`${CMS_URL}/api/product`)
+  const response = await fetch(`${CMS_URL}/api/products`)
 
   if (!response.ok) {
     throw new Error(await response.text())
