@@ -93,9 +93,6 @@ Video on deploying Strapi to Heroku
 
 Deploy,
 
-bilder på admin cards? funker ikke få tak i de fra responsen for en rar
-back-btn blir dytta ned i heigt av main-container, why?
-
 work/id + bilde modal?
 search?
 
