@@ -2,6 +2,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['localhost', 'aylagursoy.com'],
+    domains: ['localhost', 'ayla-gursoy-com.herokuapp.com'],
   },
 }
