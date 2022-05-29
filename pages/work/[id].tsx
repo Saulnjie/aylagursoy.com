@@ -75,10 +75,10 @@ export default function Product({
           </div>
         </div>
       </div>
-
         <Link href={`/work`}>
             <button className='back-btn'>Back</button>
         </Link>
+
     <footer></footer>
     </main>
   </div>

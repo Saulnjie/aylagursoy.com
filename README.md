@@ -94,6 +94,7 @@ Video on deploying Strapi to Heroku
 Deploy,
 fixed på logo? for at den skal holde seg med hamburgeren? hamburger meny er off position, og logo blir blurry på 530px ca
 bilder på admin cards? funker ikke få tak i de fra responsen for en rar
+back-btn blir dytta ned i heigt av main-container, why?
 
 work/id + bilde modal?
 search?
