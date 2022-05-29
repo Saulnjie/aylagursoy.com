@@ -64,15 +64,15 @@ export default function Home({
       method: "POST",
       body: form,
       headers: {
-        Authorization: "" // Add JWT token here (Berarer ....)
-      }
+        Authorization: `Bearer ${jwt}`,
+      },
     })
 
     if (!response.ok) {
       // TODO: Handle error
       throw new Error(await response.text())
     }
-
+    confirm('Post created!')
     console.log(await response.json())
   }
   return (
@@ -93,30 +93,28 @@ export default function Home({
           <div className="bcrums-container">
             <Crums />
           </div>
-    {/* <div className="fullwidth-container">
-      </div> */}
     
           <h1 className="text-2xl	mt-4 font-bold text-zinc-900">Create product</h1>
           <p className="about-paragraph w-2/3 flex-1 text-base text-zinc-600">
-            This is the section you can upload your own projects and work. This will automatically be implemented to your website.
+            This is the section you can upload your own projects and work. <br/> This will automatically be implemented to your website.
           </p>
           <form onSubmit={form.handleSubmit(onSubmit)}>
-            <h2 className="text-lg	mt-2 mb-4 font-bold text-zinc-900">Fill in info about your product here <br/>All fields are required</h2>
+            <h2 className="text-lg	mt-2 mb-4 font-bold text-zinc-900">Fill in info about your product here <br/>*All fields are required</h2>
             <div>
               <label htmlFor="title">Title</label>
-              <input type="text" {...form.register('title')} />
+              <input type="text" {...form.register('title')} required />
             </div>
             <div>
               <label htmlFor="description">Description</label>
-              <input type="text" {...form.register('description')} />
+              <input type="text" {...form.register('description')} required/>
             </div>
             <div>
               <label htmlFor="introDescription">Intor description</label>
-              <input type="text" {...form.register('introDescription')} />
+              <input type="text" {...form.register('introDescription')} required/>
             </div>
             <div>
               <label htmlFor="coverImage">Cover image</label>
-              <input type="file" {...form.register('coverImage')} />
+              <input type="file" {...form.register('coverImage')} required/>
             </div>
             <div>
               <label htmlFor="additionalImages">Additional Image</label>
@@ -124,6 +122,7 @@ export default function Home({
                 type="file"
                 multiple
                 {...form.register('additionalImages')}
+                required
               />
             </div>
             <div>

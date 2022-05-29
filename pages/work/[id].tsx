@@ -30,18 +30,16 @@ export default function Product({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return <div className='fullscreen-container'>
     <main className='main-container-special'>
-    {/* <div className="nav-work-container py-2"> */}
       <header className='py-2'><Nav/></header>
-      {/* </div> */}
       <div className='product-banner-container'>
       <Image objectFit='cover' layout="fill" src={CMS_URL + product.data.attributes.coverImage.data.attributes.url} />
         <h2 className='product-hero-title text-zinc-50 font-semibold'>{product.data.attributes.title}</h2>
       </div>
-        {/* <p className='img-test'>Viewing product: {product.data.attributes.coverImage}</p> */}
-
         <div className='bcrums-container'>
         <Crums/>
         </div>
+
+
     <div className='product-info-overall-container'>
         <div className='product-info-left-container'>
           <h3 className='product-subtitles mb-1 text-zinc-900 font-bold text-lg'>About this project</h3>
@@ -62,7 +60,6 @@ export default function Product({
             </div>
           </div>
         </div>
-
       </div>
 
       <p className='mt-6 text-zinc-900 font-bold text-lg'>Product Images</p>
@@ -84,6 +81,7 @@ export default function Product({
           </div>
         </div>
       </div>
+      
         <Link href={`/work`}>
             <button className='back-btn'>Back</button>
         </Link>

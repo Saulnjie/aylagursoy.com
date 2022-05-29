@@ -73,24 +73,26 @@ const Crums = () => {
      <div className='bcrums-container flex flex-row justify-between'>
      <Crums/>
      {/* <h1 className=' text-3xl font-semibold text-zinc-900'>Admin page</h1> */}
+          <div className='token-contaier'>
         <p className='token-paragraph'>You are logged in</p>
-     </div>
-      <div className='token-contaier'>
         <Link href={`/`}>
        <button className='logout logout-btn' onClick={ () => {
             localStorage.removeItem("jwt")
             window.location.replace("/")}}>Logout</button>
        </Link>
+     </div>
       </div>
 
-       <h2 className='text-lg	text-zinc-900 font-bold'>These are all your posted products and articles</h2>
+       <h2 className='text-lg	text-zinc-900 font-bold'>These are all your current products and posts: </h2>
      <div className="all-products-container cards grid grid-cols-4 gap-5">
           {products.map((product) => {
             return (
               <div>
               <Link  href={`/work/${product.id}`}>
                 <a className="project-card-container cards">
-                <Image src={"/img/mainbanner.jpg"} width={300} height={250} />
+                <div className='card-image-container'>
+                  {/* <img src={CMS_URL + product.attributes.coverImage.data.attributes.url}  className="object-[50%_50%]" /> */}
+                  </div>
                 <h3 className="text-xl font-semibold text-zinc-600">
                   {product.attributes.title}
                 </h3>
@@ -109,8 +111,8 @@ const Crums = () => {
             )
           })}
         </div>
-
         </div>
+        <footer></footer>
 
         </div>
 }

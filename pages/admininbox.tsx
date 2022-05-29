@@ -73,7 +73,7 @@ export default function Home({
             <Crums />
             {/* <h1 className="text-2xl	font-bold text-zinc-900">Admin Inbox</h1> */}
           </div>
-          <h2 className='inbox-subtitle text-zinc-900 font-semibold text-lg'>These are all your messages</h2>
+          <h2 className='inbox-subtitle text-zinc-900 font-semibold text-lg'>These are all your messages:</h2>
           {messages.data.map(message => {
             return (
               <div className="all-messages-container"  key={message.id}>

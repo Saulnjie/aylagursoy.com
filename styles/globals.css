@@ -82,8 +82,8 @@ footer {
   color: white;
   width: 150px;
   height: 50px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 8px;
+  /* margin-bottom: 30px; */
   border-radius: 8px;
 }
 
@@ -113,4 +113,17 @@ footer {
   font-family: 'Overpass', sans-serif !important;
 }
 
+.delete-btn {
+  background-color: rgb(153 27 27);
+  color: white;
+  width: 150px;
+  height: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  opacity: 100%;
+}
 
+.delete-btn:hover {
+  opacity: 70%;
+}
