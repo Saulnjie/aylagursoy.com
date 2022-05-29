@@ -90,3 +90,5 @@ Video on deploying Strapi to Heroku
 
 1. import nye bilder til Strapi (kanskje ikke nødvendig) -via netlify?
 2. hvordan får jeg <br/> i strapi? - list items
+3. breach på inbox
+4. autodeploy
