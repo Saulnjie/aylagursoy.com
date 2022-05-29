@@ -12,16 +12,9 @@ const Crums = () => {
     <Breadcrumbs 
     useDefaultStyle
     transformLabel={(title) => title + ''}
-    // replaceCharacterList={[{ from: '.', to: ' ' }]} kanskje bruke denne for å replace småbokstaver til store? eller bytte filnavn?
     />
   );
 };
-
-// En annen solution?
-// const Crums = () => {
-//   return <Breadcrumbs useDefaultStyle={true} omitIndexList={[1]} />;
-// };
-
 
 
 
@@ -65,8 +58,9 @@ export default function Product({
       <p className='mt-6 text-zinc-900 font-bold text-lg'>Product Images</p>
       <div className='product-image-overall-container'>
         <div className='product-image-left-container'>
+          <div className='product-image-one' >
           <Image objectFit='cover' layout="fill" className="object-[50%_50%]" src={CMS_URL + product.data.attributes.coverImage.data.attributes.url} />
-          {/* <div className='product-image-one' >${product.data.attributes.coverImage}</div> */}
+          </div>
         </div>
         <div className='product-image-right-container'>
           <div className='product-image-two'>
@@ -81,7 +75,7 @@ export default function Product({
           </div>
         </div>
       </div>
-      
+
         <Link href={`/work`}>
             <button className='back-btn'>Back</button>
         </Link>

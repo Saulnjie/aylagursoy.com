@@ -46,13 +46,21 @@ export default function Login() {
     router.push('/admin')
   }
 
-  return (
+  return (   <div>
+     <div className="fullwidth-container">
+  <div className="nav-work-container py-2">
+    <header>
+   <Nav/>
+    </header>
+  </div>
+  <div className="fullscreen-container flex-col">
+    <h1 className="hero-page-title text-3xl font-semibold text-zinc-50">
+      Login
+    </h1>
+  </div>
+</div>
     <div className='main-container'>
-      <header><Nav/></header>
     <div className='form-container'>
-              {/* <div className='bcrums-container'>
-        <Crums/>
-        </div> */}
     <form onSubmit={handleSubmit}>
       {error && <span className="text-red-700">Error: {error}</span>}
       <h2 className='login-subtitle text-lg text-zinc-900 font-bold'>Login to your admin user here</h2>
@@ -94,6 +102,7 @@ export default function Login() {
       </div>
       <button className='login-btn'>Login</button>
     </form>
+    </div>
     </div>
     </div>
   )

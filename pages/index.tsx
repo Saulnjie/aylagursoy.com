@@ -12,7 +12,6 @@ import mainBannertwo from '../public/img/coatedbackground.jpg'
 export default function Home({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  // console.log(findStrapiElementById(products, 2))
   return (
     <body>
       <div className='hero-image-container'>
@@ -32,21 +31,6 @@ export default function Home({
       </body>
   )
 }
-
-// export async function getStaticProps() {
-//   const response = await fetch('http://localhost:1337/api/products')
-
-//   if (!response.ok) {
-//     throw new Error(await response.text())
-//   }
-
-//   const products: ProductsResponse = await response.json()
-//   return {
-//     props: {
-//       products: products.data,
-//     },
-//   }
-// }
 
 export async function getStaticProps() {
   const response = await fetch(`${CMS_URL}/api/products?populate=*`)

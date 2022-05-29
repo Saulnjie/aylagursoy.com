@@ -3,8 +3,6 @@ import { ProductsResponse } from '../types/products-response'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import mainImage from '../public/img/mainbanner.jpg'
-import Nav from './components/navigation/navigation'
 import Adminnav from './components/navigation/adminnav'
 import React from 'react'
 import Breadcrumbs from 'nextjs-breadcrumbs'
@@ -69,7 +67,6 @@ export default function Home({
     })
 
     if (!response.ok) {
-      // TODO: Handle error
       throw new Error(await response.text())
     }
     confirm('Post created!')

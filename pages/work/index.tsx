@@ -17,12 +17,6 @@ const Crums = () => {
   );
 };
 
-type MyLoaderProps = {
-  src: string,
-  width: number,
-  quality: number
-}
-
 
 export default function Home({
   products,

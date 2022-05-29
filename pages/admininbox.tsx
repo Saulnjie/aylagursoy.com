@@ -1,12 +1,7 @@
 import type { InferGetStaticPropsType } from 'next'
-import { ProductsResponse } from '../types/products-response'
 import Image from 'next/image'
-import mainImage from '../public/img/mainbanner.jpg'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import Nav from './components/navigation/navigation'
-import { renderToHTML } from 'next/dist/server/render'
-import { detectContentType } from 'next/dist/server/image-optimizer'
 import Adminnav from './components/navigation/adminnav'
 import React from 'react'
 import Breadcrumbs from 'nextjs-breadcrumbs'
@@ -71,7 +66,6 @@ export default function Home({
         <main className="main-container flex min-h-screen  py-2">
           <div className="bcrums-container flex w-full flex-row justify-between">
             <Crums />
-            {/* <h1 className="text-2xl	font-bold text-zinc-900">Admin Inbox</h1> */}
           </div>
           <h2 className='inbox-subtitle text-zinc-900 font-semibold text-lg'>These are all your messages:</h2>
           {messages.data.map(message => {
