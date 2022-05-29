@@ -99,7 +99,7 @@ export default function Home({
             This is the section you can upload your own projects and work. <br/> This will automatically be implemented to your website.
           </p>
           <form onSubmit={form.handleSubmit(onSubmit)}>
-            <h2 className="text-lg	mt-2 mb-4 font-bold text-zinc-900">Fill in info about your product here <br/>*All fields are required</h2>
+            <h2 className="text-lg	mt-2 mb-4 font-bold text-zinc-900">Fill in info about your product here <br/>*Not all fields are required</h2>
             <div>
               <label htmlFor="title">Title</label>
               <input type="text" {...form.register('title')} required />
@@ -109,7 +109,7 @@ export default function Home({
               <input type="text" {...form.register('description')} required/>
             </div>
             <div>
-              <label htmlFor="introDescription">Intor description</label>
+              <label htmlFor="introDescription">Intro description</label>
               <input type="text" {...form.register('introDescription')} required/>
             </div>
             <div>
