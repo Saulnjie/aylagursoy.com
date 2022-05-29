@@ -5,7 +5,7 @@ import Nav from '../components/navigation/navigation'
 import { CMS_URL } from '../../consts'
 import Link from "next/link"
 import SearchBar from "../components/searchbar/search"
-import React from 'react';
+import React, { useState } from 'react';
 import Breadcrumbs from 'nextjs-breadcrumbs';
 
 const Crums = () => {
@@ -19,8 +19,9 @@ const Crums = () => {
 
 
 export default function Home({
-  products,
+  products: initialProducts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+  const [products, setProducts] = useState(initialProducts)
   console.log(process.env.NEXT_PUBLIC_CMS_URL)
   return (
         <div className="fullwidth-container">
@@ -40,7 +41,7 @@ export default function Home({
           <div className='bcrums-container'>
           <Crums/>
           </div>
-          <SearchBar />
+          <SearchBar items={products} setItems={setProducts} />
       </div>
 
         <h2 className="page-title text-2xl font-bold text-zinc-900">
@@ -55,20 +56,20 @@ as practical, which together provide an innovative search for new solutions. Key
 me in all projects I participate in are: tactility, contrasts, composition and accuracy.
         </p>
 
-        <div className="all-products-container cards grid grid-cols-4 gap-5">
-          {products.map((product) => {
+        <div className='grid md:grid-cols-2 gap-4 lg:grid-cols-3'>
+          {products.length == 0 ? "No products to show" : products.map((product) => {
             console.log('image :', process.env.NEXT_PUBLIC_CMS_URL + product.attributes.coverImage.data.attributes.url)
             const imageUrl = process.env.NEXT_PUBLIC_CMS_URL + product.attributes.coverImage.data.attributes.url
             return (
               <Link key={product.id} href={`/work/${product.id}`}>
-                <a className="project-card-container cards">
-                  <div className='card-image-container'>
-                  <img src={imageUrl}  className="object-[50%_50%]" />
+                <a className="hover:opacity-80 transition">
+                  <div className='relative h-[250px] mb-2'>
+                  <Image src={imageUrl} layout="fill" objectFit='cover'  className="object-[50%_50%]" />
                   </div>
-                <h3 className="card-title text-xl font-semibold ">
+                <h3 className="text-xl font-semibold ">
                   {product.attributes.title}
                 </h3>
-                <p className='card-description text-light'>{product.attributes.introDescription}</p>
+                <p className='text-zinc-600'>{product.attributes.introDescription}</p>
                 </a>
               </Link>
             )
