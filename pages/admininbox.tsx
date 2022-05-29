@@ -1,4 +1,4 @@
-import type { InferGetStaticPropsType } from 'next'
+import type { InferGetStaticPropsType,InferGetServerSidePropsType } from 'next'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
@@ -16,7 +16,7 @@ const Crums = () => {
 
 export default function Home({
   messages,
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const [jwt, setJwt] = useState('')
   const router = useRouter()
 
@@ -100,7 +100,7 @@ if (!jwt) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const response = await fetch(`${CMS_URL}/api/messages`)
 
   if (!response.ok) {
