@@ -1,9 +1,9 @@
 .fullwidth-container {
     width: 100%;
     height: 50vh;
-    background-image:url(../../public/img/coatedbackground.jpg);
+    background-image:url(../../public/img/herotry.jpg);
     background-size: cover;
-    background-position: center 100%;
+    background-position: 50% 70%;
 } 
 
 .fullscreen-container {

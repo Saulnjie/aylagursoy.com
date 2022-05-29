@@ -81,7 +81,7 @@ export default function Home({
         </header>
       </div>
       <div className="fullscreen-container flex-col">
-        <h1 className="hero-page-title text-3xl font-semibold text-zinc-50">
+        <h1 className="hero-page-title text-3xl font-semibold text-zinc-800">
           Create product
         </h1>
       </div>
