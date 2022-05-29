@@ -77,7 +77,7 @@ const Crums = () => {
         <p className='token-paragraph'>You are logged in</p>
         <Link href={`/`}>
        <button className='logout logout-btn' onClick={ () => {
-            localStorage.removeItem("jwt")
+            sessionStorage.removeItem("jwt")
             window.location.replace("/")}}>Logout</button>
        </Link>
      </div>
