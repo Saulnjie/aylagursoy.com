@@ -43,7 +43,9 @@ width: 50%;
     color: rgb(21 128 61);
 }
 
-
+.contact-msg-input-container{
+    margin-top: 2%;
+}
 .contact-msg-input-container textarea  {
 width: 100%;
 /* background-color: peru; */
