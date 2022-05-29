@@ -5,7 +5,6 @@ import Link from "next/link"
 import Image from 'next/image'
 import type { InferGetStaticPropsType } from 'next'
 import { ProductsResponse } from '../types/products-response'
-import Nav from './components/navigation/navigation'
 import Adminnav from './components/navigation/adminnav'
 import React from 'react';
 import Breadcrumbs from 'nextjs-breadcrumbs';
@@ -18,7 +17,6 @@ const Crums = () => {
     />
     );
   };
-  
   
   
   
@@ -56,28 +54,32 @@ const Crums = () => {
 
 
   
-  // const logout = document.querySelector('.logout');
-  // if (logout !== null) {
-  //   logout.onclick = function () {
-  //     localStorage.clear();
-  //     router.push('/')
-  //     return
-  //   };
-  // }
 
-
-    return  <div className='main-container'>
-     {/* <header><Nav/></header> */}
-     <header className='py-2'><Adminnav/></header>
+    return  <div>
+          <div className="fullwidth-container">
+      <div className="nav-work-container py-2">
+        <header>
+       <Adminnav/>
+        </header>
+      </div>
+      <div className="fullscreen-container flex-col">
+        <h1 className="hero-page-title text-3xl font-semibold text-zinc-50">
+          Admin Page
+        </h1>
+      </div>
+    </div>
+    <div className='main-container'>
+     {/* <header className='py-2'><Adminnav/></header> */}
      <div className='bcrums-container flex flex-row justify-between'>
-     <h1 className=' text-3xl font-semibold text-zinc-900'>Admin page</h1>
      <Crums/>
-     </div>
-     {/* {jwt} */}
+     {/* <h1 className=' text-3xl font-semibold text-zinc-900'>Admin page</h1> */}
         <p className='token-paragraph'>You are logged in</p>
+     </div>
       <div className='token-contaier'>
         <Link href={`/`}>
-       <button className='logout logout-btn'>Logout</button>
+       <button className='logout logout-btn' onClick={ () => {
+            localStorage.removeItem("jwt")
+            window.location.replace("/")}}>Logout</button>
        </Link>
       </div>
 
@@ -103,8 +105,6 @@ const Crums = () => {
                             deleteThing(product.id);
                           }
                         }} className='delete-btn'>Delete</button>
-                {/* <p className='text-zinc-600 text-light'>{product.attributes.introDescription}</p> */}
-                {/* <img className='test-img' src="${product.attributes.coverImage}"/> */}
               </div>
             )
           })}
@@ -112,6 +112,7 @@ const Crums = () => {
 
         </div>
 
+        </div>
 }
 
 
@@ -159,3 +160,18 @@ export async function getStaticProps() {
 // } else {
 //   logoutButton.style.display = "none";
 // }
+
+
+
+
+  
+  // const logout = document.querySelector('.logout');
+  // if (logout !== null) {
+  //   logout.onclick = function () {
+  //     localStorage.clear();
+  //     router.push('/')
+  //     return
+  //   };
+  // }
+  // const logoutButton = document.querySelector(".logout-btn")
+

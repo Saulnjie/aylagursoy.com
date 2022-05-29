@@ -92,7 +92,7 @@ Video on deploying Strapi to Heroku
 10-99 er most likely imposible:
 
 Deploy, search?, feil på create pga bilder?, fixed på logo?
-jwt clear
+jwt clear - er nesten der
 
 modal for work/id
 

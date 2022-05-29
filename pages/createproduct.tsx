@@ -77,26 +77,31 @@ export default function Home({
   }
   return (
     <div>
+    <div className="fullwidth-container">
+      <div className="nav-work-container py-2">
+        <header>
+       <Adminnav/>
+        </header>
+      </div>
+      <div className="fullscreen-container flex-col">
+        <h1 className="hero-page-title text-3xl font-semibold text-zinc-50">
+          Create product
+        </h1>
+      </div>
+    </div>
         <main className="main-container">
-     
-          <header className="w-max">
-            <Adminnav />
-          </header>
           <div className="bcrums-container">
             <Crums />
           </div>
-    <div className="fullwidth-container">
-      </div>
+    {/* <div className="fullwidth-container">
+      </div> */}
     
-          <h1 className="text-2xl	font-bold text-zinc-900">Create product</h1>
+          <h1 className="text-2xl	mt-4 font-bold text-zinc-900">Create product</h1>
           <p className="about-paragraph w-2/3 flex-1 text-base text-zinc-600">
             This is the section you can upload your own projects and work. This will automatically be implemented to your website.
           </p>
-     
-
-
-
           <form onSubmit={form.handleSubmit(onSubmit)}>
+            <h2 className="text-lg	mt-2 mb-4 font-bold text-zinc-900">Fill in info about your product here <br/>All fields are required</h2>
             <div>
               <label htmlFor="title">Title</label>
               <input type="text" {...form.register('title')} />

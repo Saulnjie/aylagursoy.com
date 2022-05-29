@@ -61,12 +61,17 @@ export default function Home({
        <Adminnav/>
         </header>
       </div>
+      <div className="fullscreen-container flex-col">
+        <h1 className="hero-page-title text-3xl font-semibold text-zinc-50">
+          Inbox
+        </h1>
+      </div>
     </div>
 
         <main className="main-container flex min-h-screen  py-2">
           <div className="bcrums-container flex w-full flex-row justify-between">
-            <h1 className="text-2xl	font-bold text-zinc-900">Admin Inbox</h1>
             <Crums />
+            {/* <h1 className="text-2xl	font-bold text-zinc-900">Admin Inbox</h1> */}
           </div>
           <h2 className='inbox-subtitle text-zinc-900 font-semibold text-lg'>These are all your messages</h2>
           {messages.data.map(message => {
