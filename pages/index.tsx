@@ -16,7 +16,7 @@ export default function Home({
     <body>
       <div className='hero-image-container'>
       <Image objectFit='cover' layout="fill" className="object-[50%_50%]" src={mainBanner} />
-    <div className='fullscreen-container' >
+    <div className='fullscreen-container pr-4' >
         <div className="nav-work-container py-2">
         <header><Nav/></header>
         </div>
