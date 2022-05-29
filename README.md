@@ -95,11 +95,11 @@ Deploy,
 fixed på logo? for at den skal holde seg med hamburgeren? hamburger meny er off position
 bilder på admin cards? funker ikke få tak i de fra responsen for en rar
 
-hva faen skjer med bildene på work/id + modal?
+work/id + bilde modal?
 search?
 
 1. import nye bilder til Strapi (kanskje ikke nødvendig) -via netlify?
 2. searchbar - Koblet input med livesearchen....
 3. hvordan får jeg <br/> i strapi? - list items
-4. skjer refreshen på admin uten jwt token for det er local host? - feil måte og loade på!
+4. feil måte og loade JWT på!
 5. gå over alle roles i strapi for safety

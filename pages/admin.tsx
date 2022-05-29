@@ -86,12 +86,14 @@ const Crums = () => {
        <h2 className='text-lg	text-zinc-900 font-bold'>These are all your current products and posts: </h2>
      <div className="all-products-container cards grid grid-cols-4 gap-5">
           {products.map((product) => {
+      //  const imageUrl = process.env.NEXT_PUBLIC_CMS_URL + product.attributes.coverImage.data.attributes.url
             return (
               <div>
               <Link  href={`/work/${product.id}`}>
                 <a className="project-card-container cards">
                 <div className='card-image-container'>
-                  {/* <img src={CMS_URL + product.attributes.coverImage.data.attributes.url}  className="object-[50%_50%]" /> */}
+                  {/* <Image src={imageUrl}  className="object-[50%_50%]" /> */}
+                  {/* <Image objectFit='cover' layout="fill" className="object-[50%_50%]" src={CMS_URL + product.data.attributes.coverImage.data.attributes.url} /> */}
                   </div>
                 <h3 className="text-xl font-semibold text-zinc-600">
                   {product.attributes.title}
