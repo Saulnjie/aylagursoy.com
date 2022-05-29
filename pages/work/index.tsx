@@ -22,7 +22,15 @@ export default function Home({
   products: initialProducts,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const [products, setProducts] = useState(initialProducts)
-  console.log(process.env.NEXT_PUBLIC_CMS_URL)
+
+  const handleSearch = (query: string) => {
+    const filteredProducts = products.filter(product => {
+      return product.attributes.title.toLowerCase().includes(query.toLocaleLowerCase())
+    })
+
+    setProducts(filteredProducts)
+  }
+
   return (
         <div className="fullwidth-container">
     <div className="nav-work-container py-2">
@@ -41,7 +49,7 @@ export default function Home({
           <div className='bcrums-container'>
           <Crums/>
           </div>
-          <SearchBar items={products} setItems={setProducts} />
+          <SearchBar onChange={handleSearch}  />
       </div>
 
         <h2 className="page-title text-2xl font-bold text-zinc-900">

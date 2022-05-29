@@ -1,1 +1,1 @@
-export const CMS_URL = process.env.CMS_URL || "http://localhost:1337"
+export const CMS_URL = process.env.NEXT_PUBLIC_CMS_URL || "http://localhost:1337"
