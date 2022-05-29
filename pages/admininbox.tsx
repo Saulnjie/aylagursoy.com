@@ -46,6 +46,9 @@ export default function Home({
   router.replace(router.asPath);
 }
 
+if (!jwt) {
+  return null
+}
 
   return (
     <div>
@@ -98,7 +101,7 @@ export default function Home({
 }
 
 export async function getStaticProps() {
-  const response = await fetch('http://localhost:1337/api/messages')
+  const response = await fetch(`${CMS_URL}/api/messages`)
 
   if (!response.ok) {
     throw new Error(await response.text())

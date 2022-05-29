@@ -87,17 +87,6 @@ Video on deploying Strapi to Heroku
 ---
 
 99 problems:
-1-5 bør værra lett:
-6-8 kan værra morrro:
-10-99 er most likely imposible:
-
-Deploy,
-
-work/id + bilde modal?
-search?
 
 1. import nye bilder til Strapi (kanskje ikke nødvendig) -via netlify?
-2. searchbar - Koblet input med livesearchen....
-3. hvordan får jeg <br/> i strapi? - list items
-4. feil måte og loade JWT på!
-5. gå over alle roles i strapi for safety
+2. hvordan får jeg <br/> i strapi? - list items

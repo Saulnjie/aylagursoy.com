@@ -72,6 +72,11 @@ export default function Home({
     confirm('Post created!')
     console.log(await response.json())
   }
+
+  if (!jwt) {
+    return null
+  }
+  
   return (
     <div>
     <div className="fullwidth-container">
@@ -144,7 +149,7 @@ export default function Home({
 }
 
 export async function getStaticProps() {
-  const response = await fetch('http://localhost:1337/api/products')
+  const response = await fetch(`${CMS_URL}/api/product`)
 
   if (!response.ok) {
     throw new Error(await response.text())

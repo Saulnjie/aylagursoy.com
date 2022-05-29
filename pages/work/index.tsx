@@ -24,6 +24,11 @@ export default function Home({
   const [products, setProducts] = useState(initialProducts)
 
   const handleSearch = (query: string) => {
+    if (!query) {
+      setProducts(initialProducts)
+      return
+    }
+
     const filteredProducts = products.filter(product => {
       return product.attributes.title.toLowerCase().includes(query.toLocaleLowerCase())
     })

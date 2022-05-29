@@ -2,11 +2,11 @@ import type { InferGetStaticPropsType } from 'next'
 import { ProductsResponse } from '../types/products-response'
 import Image from 'next/image'
 import aboutimage from '../public/img/aboutprofile.jpg'
-import findStrapiElementById from './utils/strapiutil'
 import Nav from './components/navigation/navigation'
 import Contact from './components/contacter/contact'
 import React from 'react';
 import Breadcrumbs from 'nextjs-breadcrumbs';
+import { CMS_URL } from '../consts'
 
 const Crums = () => {
   return (
@@ -110,7 +110,7 @@ designers.
   }
 
 export async function getStaticProps() {
-    const response = await fetch('http://localhost:1337/api/products')
+    const response = await fetch(`${CMS_URL}/api/products`)
   
     if (!response.ok) {
       throw new Error(await response.text())
