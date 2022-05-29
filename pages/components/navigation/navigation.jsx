@@ -45,7 +45,7 @@ export default function Nav() {
 				{/* <SearchBar/> */}
 				<Link activeClassName='active' href='/'>
 					<div className='logo_nav_container'>
-						<Image className='logo_nav' src={logo} href='/index' alt='logo'/>
+						<Image className='logo_nav' src={logo} href='/index' objectFit='contain' alt='logo'/>
 					</div>
 				</Link>
 
@@ -59,6 +59,7 @@ export default function Nav() {
                             /* width: 100vw; */
                             /* margin-top: 50px; */
                             position: fixed;
+														top: 25px;
                             text-align: center;
                             -webkit-box-shadow: 0px 1px 3px 1px #5e5e5e;
                             box-shadow: 0px 1px 3px 1px #5e5e5e;

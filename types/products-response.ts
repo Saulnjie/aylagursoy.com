@@ -1,32 +1,3 @@
-// export interface ProductsResponse {
-//     data: Datum[];
-//     meta: Meta;
-// }
-
-// export interface Datum {
-//     id:         number;
-//     attributes: Attributes;
-// }
-
-// export interface Attributes {
-//     title:       string;
-//     description: string;
-//     createdAt:   Date;
-//     updatedAt:   Date;
-//     publishedAt: Date;
-// }
-
-// export interface Meta {
-//     pagination: Pagination;
-// }
-
-// export interface Pagination {
-//     page:      number;
-//     pageSize:  number;
-//     pageCount: number;
-//     total:     number;
-// }
-
 export interface ProductsResponse {
     data: Datum[];
     meta: Meta;
@@ -44,14 +15,14 @@ export interface PurpleAttributes {
     updatedAt:        Date;
     publishedAt:      Date;
     specifications:   string;
-    purchased:        null | string;
+    purchased:        string;
     introDescription: string;
     coverImage:       CoverImage;
     additionalImages: AdditionalImages;
 }
 
 export interface AdditionalImages {
-    data: DAT[] | null;
+    data: DAT[];
 }
 
 export interface DAT {
@@ -61,26 +32,21 @@ export interface DAT {
 
 export interface DataAttributes {
     name:              string;
-    alternativeText:   string;
-    caption:           string;
+    alternativeText:   null | string;
+    caption:           null | string;
     width:             number;
     height:            number;
     formats:           Formats;
     hash:              string;
-    ext:               EXT;
-    mime:              MIME;
+    ext:               string;
+    mime:              string;
     size:              number;
     url:               string;
     previewUrl:        null;
-    provider:          Provider;
+    provider:          string;
     provider_metadata: null;
     createdAt:         Date;
     updatedAt:         Date;
-}
-
-export enum EXT {
-    JPEG = ".jpeg",
-    Jpg = ".jpg",
 }
 
 export interface Formats {
@@ -93,21 +59,13 @@ export interface Formats {
 export interface Large {
     name:   string;
     hash:   string;
-    ext:    EXT;
-    mime:   MIME;
+    ext:    string;
+    mime:   string;
     path:   null;
     width:  number;
     height: number;
     size:   number;
     url:    string;
-}
-
-export enum MIME {
-    ImageJPEG = "image/jpeg",
-}
-
-export enum Provider {
-    Local = "local",
 }
 
 export interface CoverImage {
