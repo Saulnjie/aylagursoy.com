@@ -74,7 +74,7 @@ as practical, which together provide an innovative search for new solutions. Key
 me in all projects I participate in are: tactility, contrasts, composition and accuracy.
         </p>
 
-        <div className='grid md:grid-cols-2 gap-4 lg:grid-cols-3'>
+        <div className='grid md:grid-cols-2 gap-4 lg:grid-cols-3 mb-8'>
           {products.length == 0 ? "No products to show" : products.map((product) => {
             console.log('image :', process.env.NEXT_PUBLIC_CMS_URL + product.attributes.coverImage.data.attributes.url)
             const imageUrl = process.env.NEXT_PUBLIC_CMS_URL + product.attributes.coverImage.data.attributes.url
