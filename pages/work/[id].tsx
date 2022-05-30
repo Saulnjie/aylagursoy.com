@@ -21,7 +21,12 @@ const Crums = () => {
 export default function Product({
   product,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  return <div className='fullscreen-container'>
+  return<div>
+           <head>
+        <title>{product.data.attributes.title}</title>
+        {/* <link rel="shortcut icon" href="../public/favico.ico"/> */}
+        </head>
+   <div className='fullscreen-container'>
     <main className='main-container-special'>
       <header className='py-2'><Nav/></header>
       <div className='product-banner-container'>
@@ -81,6 +86,7 @@ export default function Product({
 
     <footer></footer>
     </main>
+  </div>
   </div>
 }
 

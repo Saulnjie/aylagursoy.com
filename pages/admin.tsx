@@ -58,6 +58,10 @@ const Crums = () => {
   }
 
     return  <div>
+        <head>
+        <title>Admin</title>
+        {/* <link rel="shortcut icon" href="../public/favico.ico"/> */}
+        </head>
           <div className="fullwidth-container">
       <div className="nav-work-container py-2">
         <header>

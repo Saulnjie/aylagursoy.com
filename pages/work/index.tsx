@@ -37,6 +37,11 @@ export default function Home({
   }
 
   return (
+    <div>
+         <head>
+        <title>Work</title>
+        {/* <link rel="shortcut icon" href="../public/favico.ico"/> */}
+        </head>
         <div className="fullwidth-container">
     <div className="nav-work-container py-2">
         <header>
@@ -91,7 +96,7 @@ me in all projects I participate in are: tactility, contrasts, composition and a
         <footer></footer>
       </main>
     </div>
-
+    </div>
   )
 }
 

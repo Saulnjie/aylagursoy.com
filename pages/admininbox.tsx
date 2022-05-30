@@ -52,7 +52,10 @@ if (!jwt) {
 
   return (
     <div>
-
+        <head>
+        <title>Inbox</title>
+        {/* <link rel="shortcut icon" href="../public/favico.ico"/> */}
+        </head>
     <div className="fullwidth-container">
       <div className="nav-work-container py-2">
         <header>

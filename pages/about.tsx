@@ -22,6 +22,11 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   // console.log(findStrapiElementById(products, 2))
     return (
+      <div>
+             <head>
+        <title>About</title>
+        <link rel="icon" href="../public/favico.ico"/>
+        </head>
       <div className='fullscreen-container py-2'>
         <div className='main-container'>
         <header><Nav/></header>
@@ -103,6 +108,7 @@ designers.
       </main>
       <footer></footer>
       
+      </div>
       </div>
       </div>
       </div>

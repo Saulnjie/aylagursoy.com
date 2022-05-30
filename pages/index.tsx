@@ -12,6 +12,11 @@ export default function Home({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
+    <div>
+        <head>
+        <title>Home</title>
+        {/* <link rel="shortcut icon" href="../public/favico.ico"/> */}
+        </head>
     <body>
       <div className='hero-image-container'>
       <Image objectFit='cover' layout="fill" className="object-[50%_50%]" src={mainBanner} />
@@ -28,6 +33,7 @@ export default function Home({
       </div>
       </div>
       </body>
+      </div>
   )
 }
 
