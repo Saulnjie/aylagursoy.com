@@ -13,14 +13,14 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel-plugin for production.
  */
 const documents = {
-    "\n  query ProductBySlug($slug: String!) {\n    product(filter: {slug: {eq: $slug}}) {\n      id\n      title\n      slug\n      description\n      specifications\n      purchaseLocations\n      excerpt\n      coverimage {\n        id\n        url\n        alt\n        blurUpThumb\n      }\n      images {\n        url\n        alt\n        id\n        blurUpThumb\n      }\n    }\n  }\n": types.ProductBySlugDocument,
+    "\n  query ProductBySlug($slug: String!) {\n    product(filter: {slug: {eq: $slug}}) {\n      id\n      title\n      slug\n      description\n      specifications\n      purchaseInformation\n      excerpt\n      coverimage {\n        id\n        url\n        alt\n        blurUpThumb\n      }\n      images {\n        url\n        alt\n        id\n        blurUpThumb\n      }\n    }\n  }\n": types.ProductBySlugDocument,
     "\n  query ProductHome {\n    allProducts {\n      id\n      excerpt\n      title\n      slug\n      coverimage {\n        url\n        blurUpThumb\n        alt\n      }\n    }\n  }\n": types.ProductHomeDocument,
 };
 
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function graphql(source: "\n  query ProductBySlug($slug: String!) {\n    product(filter: {slug: {eq: $slug}}) {\n      id\n      title\n      slug\n      description\n      specifications\n      purchaseLocations\n      excerpt\n      coverimage {\n        id\n        url\n        alt\n        blurUpThumb\n      }\n      images {\n        url\n        alt\n        id\n        blurUpThumb\n      }\n    }\n  }\n"): (typeof documents)["\n  query ProductBySlug($slug: String!) {\n    product(filter: {slug: {eq: $slug}}) {\n      id\n      title\n      slug\n      description\n      specifications\n      purchaseLocations\n      excerpt\n      coverimage {\n        id\n        url\n        alt\n        blurUpThumb\n      }\n      images {\n        url\n        alt\n        id\n        blurUpThumb\n      }\n    }\n  }\n"];
+export function graphql(source: "\n  query ProductBySlug($slug: String!) {\n    product(filter: {slug: {eq: $slug}}) {\n      id\n      title\n      slug\n      description\n      specifications\n      purchaseInformation\n      excerpt\n      coverimage {\n        id\n        url\n        alt\n        blurUpThumb\n      }\n      images {\n        url\n        alt\n        id\n        blurUpThumb\n      }\n    }\n  }\n"): (typeof documents)["\n  query ProductBySlug($slug: String!) {\n    product(filter: {slug: {eq: $slug}}) {\n      id\n      title\n      slug\n      description\n      specifications\n      purchaseInformation\n      excerpt\n      coverimage {\n        id\n        url\n        alt\n        blurUpThumb\n      }\n      images {\n        url\n        alt\n        id\n        blurUpThumb\n      }\n    }\n  }\n"];
 /**
  * The graphql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */

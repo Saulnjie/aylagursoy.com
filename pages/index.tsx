@@ -16,7 +16,7 @@ export default function Home({
           <Link key={product.id} href={`/${product.slug}`}>
             <a>
               <div className='relative group h-[450px] w-full'>
-                <div className='absolute opacity-0 group-hover:opacity-95 flex top-0 left-0 h-full w-full bg-brand z-10 flex-col justify-end items-start p-8 transition duration-500'>
+                <div className='absolute opacity-0 group-hover:opacity-95 flex top-0 left-0 h-full w-full bg-brand z-10 flex-col justify-end items-start p-6 transition duration-500'>
                   <span className='block mb-1 font-semibold text-lg'>{product.title}</span>
                   <span className="text-neutral-700">{product.excerpt}</span>
                 </div>

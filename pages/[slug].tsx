@@ -22,16 +22,11 @@ export default function Product({ product }: InferGetServerSidePropsType<typeof 
           <span className="text-4xl leading-tight lg:-mt-2.5 font-semibold block mb-4">{product.title}</span>
           <div dangerouslySetInnerHTML={{ __html: product.description }} className="text-lg prose text-zinc-700 leading-relaxed" />
           <div className="mt-8">
-            {product.purchaseLocations.length === 0 ? <span className="text-neutral-600">Not yet available for purchase</span> : (
-              <ul>
-                {product.purchaseLocations.map((location) => {
-                  return (
-                    <li>
-                      <a href={location}>{location}</a>
-                    </li>
-                  )
-                })}
-              </ul>
+            {!product.purchaseInformation ? <span className="text-gray-700">Not yet available for purchase</span> : (
+              <div>
+                <span className="text-lg font-semibold mb-4 block">Purchase information</span>
+                <div className="prose" dangerouslySetInnerHTML={{ __html: product.purchaseInformation }} />
+              </div>
             )}
           </div>
         </div>
@@ -48,7 +43,7 @@ const PRODUCT_BY_SLUG_QUERY = gql`
       slug
       description
       specifications
-      purchaseLocations
+      purchaseInformation
       excerpt
       coverimage {
         id

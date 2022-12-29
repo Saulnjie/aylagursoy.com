@@ -1661,20 +1661,6 @@ export enum ItemStatus {
   Updated = 'updated'
 }
 
-/** Specifies how to filter Multiple-links fields */
-export type LinksFilter = {
-  /** Filter records linked to all of the specified records. The specified values must be Record IDs */
-  allIn?: InputMaybe<Array<InputMaybe<Scalars['ItemId']>>>;
-  /** Filter records linked to at least one of the specified records. The specified values must be Record IDs */
-  anyIn?: InputMaybe<Array<InputMaybe<Scalars['ItemId']>>>;
-  /** Search for records with an exact match. The specified values must be Record IDs */
-  eq?: InputMaybe<Array<InputMaybe<Scalars['ItemId']>>>;
-  /** Filter records with the specified field defined (i.e. with any value) or not */
-  exists?: InputMaybe<Scalars['BooleanType']>;
-  /** Filter records not linked to any of the specified records. The specified values must be Record IDs */
-  notIn?: InputMaybe<Array<InputMaybe<Scalars['ItemId']>>>;
-};
-
 export enum MuxThumbnailFormatType {
   Gif = 'gif',
   Jpg = 'jpg',
@@ -1705,7 +1691,7 @@ export type ProductModelFilter = {
   excerpt?: InputMaybe<TextFilter>;
   id?: InputMaybe<ItemIdFilter>;
   images?: InputMaybe<GalleryFilter>;
-  purchaseLocations?: InputMaybe<LinksFilter>;
+  purchaseInformation?: InputMaybe<TextFilter>;
   slug?: InputMaybe<SlugFilter>;
   specifications?: InputMaybe<TextFilter>;
   title?: InputMaybe<StringFilter>;
@@ -1759,7 +1745,7 @@ export type ProductRecord = RecordInterface & {
   excerpt: Scalars['String'];
   id: Scalars['ItemId'];
   images: Array<FileField>;
-  purchaseLocations: Array<Scalars['String']>;
+  purchaseInformation?: Maybe<Scalars['String']>;
   slug: Scalars['String'];
   specifications?: Maybe<Scalars['String']>;
   title: Scalars['String'];
@@ -1781,6 +1767,12 @@ export type ProductRecordDescriptionArgs = {
 
 /** Record of type Product (product) */
 export type ProductRecordExcerptArgs = {
+  markdown?: InputMaybe<Scalars['Boolean']>;
+};
+
+
+/** Record of type Product (product) */
+export type ProductRecordPurchaseInformationArgs = {
   markdown?: InputMaybe<Scalars['Boolean']>;
 };
 
@@ -2419,7 +2411,7 @@ export type ProductBySlugQueryVariables = Exact<{
 }>;
 
 
-export type ProductBySlugQuery = { __typename?: 'Query', product?: { __typename?: 'ProductRecord', id: any, title: string, slug: string, description: string, specifications?: string | null, purchaseLocations: Array<string>, excerpt: string, coverimage: { __typename?: 'FileField', id: any, url: string, alt?: string | null, blurUpThumb?: string | null }, images: Array<{ __typename?: 'FileField', url: string, alt?: string | null, id: any, blurUpThumb?: string | null }> } | null };
+export type ProductBySlugQuery = { __typename?: 'Query', product?: { __typename?: 'ProductRecord', id: any, title: string, slug: string, description: string, specifications?: string | null, purchaseInformation?: string | null, excerpt: string, coverimage: { __typename?: 'FileField', id: any, url: string, alt?: string | null, blurUpThumb?: string | null }, images: Array<{ __typename?: 'FileField', url: string, alt?: string | null, id: any, blurUpThumb?: string | null }> } | null };
 
 export type ProductHomeQueryVariables = Exact<{ [key: string]: never; }>;
 
@@ -2427,5 +2419,5 @@ export type ProductHomeQueryVariables = Exact<{ [key: string]: never; }>;
 export type ProductHomeQuery = { __typename?: 'Query', allProducts: Array<{ __typename?: 'ProductRecord', id: any, excerpt: string, title: string, slug: string, coverimage: { __typename?: 'FileField', url: string, blurUpThumb?: string | null, alt?: string | null } }> };
 
 
-export const ProductBySlugDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"ProductBySlug"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"product"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"filter"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"specifications"}},{"kind":"Field","name":{"kind":"Name","value":"purchaseLocations"}},{"kind":"Field","name":{"kind":"Name","value":"excerpt"}},{"kind":"Field","name":{"kind":"Name","value":"coverimage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"blurUpThumb"}}]}},{"kind":"Field","name":{"kind":"Name","value":"images"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"blurUpThumb"}}]}}]}}]}}]} as unknown as DocumentNode<ProductBySlugQuery, ProductBySlugQueryVariables>;
+export const ProductBySlugDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"ProductBySlug"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"slug"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"product"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"filter"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"slug"},"value":{"kind":"ObjectValue","fields":[{"kind":"ObjectField","name":{"kind":"Name","value":"eq"},"value":{"kind":"Variable","name":{"kind":"Name","value":"slug"}}}]}}]}}],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"description"}},{"kind":"Field","name":{"kind":"Name","value":"specifications"}},{"kind":"Field","name":{"kind":"Name","value":"purchaseInformation"}},{"kind":"Field","name":{"kind":"Name","value":"excerpt"}},{"kind":"Field","name":{"kind":"Name","value":"coverimage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"blurUpThumb"}}]}},{"kind":"Field","name":{"kind":"Name","value":"images"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}},{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"blurUpThumb"}}]}}]}}]}}]} as unknown as DocumentNode<ProductBySlugQuery, ProductBySlugQueryVariables>;
 export const ProductHomeDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"ProductHome"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"allProducts"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"}},{"kind":"Field","name":{"kind":"Name","value":"excerpt"}},{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"coverimage"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"url"}},{"kind":"Field","name":{"kind":"Name","value":"blurUpThumb"}},{"kind":"Field","name":{"kind":"Name","value":"alt"}}]}}]}}]}}]} as unknown as DocumentNode<ProductHomeQuery, ProductHomeQueryVariables>;
