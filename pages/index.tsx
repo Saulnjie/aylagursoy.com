@@ -4,13 +4,14 @@ import { gql } from "graphql-request"
 import { cmsRequest } from '../utils/cms-request'
 import Link from "next/link"
 import Container from '../components/Container'
+import { ProductHomeQuery } from '../graphql/graphql'
 
 export default function Home({
   products,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Container className='grid w-full sm:grid-cols-2 2xl:grid-cols-3 gap-4 px-16' wide>
-      {products.map((product, index) => {
+      {products.map((product) => {
         return (
           <Link key={product.id} href={`/${product.slug}`}>
             <a>
@@ -19,7 +20,7 @@ export default function Home({
                   <span className='block mb-1 font-semibold text-lg'>{product.title}</span>
                   <span className="text-neutral-700">{product.excerpt}</span>
                 </div>
-                <Image src={product.coverimage.url} alt={product.coverimage.alt} layout="fill" objectFit='cover' />
+                <Image src={product.coverimage.url} alt={product.coverimage.alt || undefined} layout="fill" objectFit='cover' />
               </div>
             </a>
           </Link>
@@ -30,7 +31,7 @@ export default function Home({
 }
 
 const QUERY = gql`
-{
+query ProductHome {
   allProducts {
     id
     excerpt
@@ -45,7 +46,7 @@ const QUERY = gql`
 `
 
 export async function getStaticProps() {
-  const { allProducts } = await cmsRequest(QUERY)
+  const { allProducts } = await cmsRequest<ProductHomeQuery>(QUERY)
 
   return {
     props: {

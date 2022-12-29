@@ -2,6 +2,7 @@ import { gql } from "graphql-request"
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next"
 import Image from "next/image"
 import Container from "../components/Container"
+import { ProductBySlugQuery } from "../graphql/graphql"
 import { cmsRequest } from "../utils/cms-request"
 
 export default function Product({ product }: InferGetServerSidePropsType<typeof getServerSideProps>) {
@@ -12,7 +13,7 @@ export default function Product({ product }: InferGetServerSidePropsType<typeof 
           {product.images.map((image) => {
             return (
               <div className="relative w-full h-full">
-                <Image className="object-cover" src={image.url} layout="responsive" alt={image.alt} height="100%" width="100%" />
+                <Image className="object-cover" src={image.url} layout="responsive" alt={image.alt || undefined} height="100%" width="100%" />
               </div>
             )
           })}
@@ -64,8 +65,11 @@ const PRODUCT_BY_SLUG_QUERY = gql`
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const slug = ctx.params?.slug as string
+  const data = await cmsRequest<ProductBySlugQuery>(PRODUCT_BY_SLUG_QUERY, { slug })
 
-  const data = await cmsRequest(PRODUCT_BY_SLUG_QUERY, { slug })
+  if (!data.product) {
+    throw new Error(`No products for slug '${slug}' was found`)
+  }
 
   return { props: { product: data.product } }
 }

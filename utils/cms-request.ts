@@ -1,6 +1,6 @@
 import { request, Variables } from "graphql-request";
 
-export async function cmsRequest(query: string, variables?: Variables) {
+export async function cmsRequest<T = any>(query: string, variables?: Variables) {
     const url = process.env.NEXT_PUBLIC_DATO_CMS_URL
     const token = process.env.NEXT_PUBLIC_DATO_CMS_TOKEN
 
@@ -8,7 +8,7 @@ export async function cmsRequest(query: string, variables?: Variables) {
         throw new Error("DatoCMS token or url is missing from environment variables")
     }
 
-    return await request(url, query, variables, {
+    return await request<T>(url, query, variables, {
         Authorization: token
     })
 }
