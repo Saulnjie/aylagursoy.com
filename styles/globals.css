@@ -2,22 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './index/index.css';
-@import './navigation/index.css';
-@import './about/index.css';
-@import './work/index.css';
-@import './login/index.css';
-@import './product/index.css';
-@import './admin/index.css';
-@import './admin/inbox.css';
-@import './contact/index.css';
-@import './product/create-product.css';
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 html,
 body {
   padding: 0;
@@ -37,94 +21,18 @@ a {
 
 
 li {
-  list-style:circle ;
+  /* list-style:circle ; */
 }
 
-footer {
-  margin-top: 50px;
-  /* background-color: rebeccapurple; */
-}
 
-.main-container {
+/* .main-container {
   display: flex;
   flex-direction: column;
   width: 66%;
-  /* height: 100vh; */
   margin: auto;
-}
+} */
 
 .hidden { 
   display: none; 
 }
 
-.back-btn {
-  background-color: rgb(28 25 23);;
-  color: white;
-  width: 150px;
-  height: 50px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border-radius: 8px;
-  flex-shrink: 0;
-}
-
-.submit-btn {
-  background-color: rgb(28 25 23);;
-  color: white;
-  width: 150px;
-  height: 50px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-}
-
-.logout-btn {
-  background-color: rgb(28 25 23);;
-  color: white;
-  width: 150px;
-  height: 50px;
-  margin-top: 8px;
-  /* margin-bottom: 30px; */
-  border-radius: 8px;
-}
-
-.create-product-btn {
-  background-color: rgb(28 25 23);;
-  color: white;
-  width: 150px;
-  height: 50px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border-radius: 8px;
-}
-
-.inbox-btn {
-  background-color: rgb(28 25 23);;
-  color: white;
-  width: 150px;
-  height: 50px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  border-radius: 8px;
-}
-
-.bcrums-container {
-  margin-top: 10px;
-  margin-bottom: 30px;
-  font-family: 'Overpass', sans-serif !important;
-}
-
-.delete-btn {
-  background-color: rgb(153 27 27);
-  color: white;
-  width: 150px;
-  height: 50px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  opacity: 100%;
-}
-
-.delete-btn:hover {
-  opacity: 70%;
-}
