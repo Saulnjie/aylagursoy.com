@@ -55,7 +55,10 @@ export default function Home() {
       <section>
         <Image
           src={aboutimage}
+          placeholder="blur"
+          blurDataURL={aboutimage.blurDataURL}
         />
+
         <h3 className='text-xl text-zinc-900 font-bold mt-4'>Contact</h3>
         <p className='prose'>For any questions or inquiries, please do not hesitate to contact me through social media or by email.</p>
         <div className='text-zinc-600 flex flex-row w-14 items-center -ml-1 mt-2'>

@@ -51,10 +51,11 @@ export default function Header() {
 
         <ul className="flex space-x-6 items-center list-none">
           {NAV_LINKS.map(link => {
+            const isActive = router.pathname === "/" ? router.pathname === link.path : router.asPath.startsWith(link.path) && link.path !== "/" || router.pathname === "/[slug]" && link.name == "Work"
             return (
-              <li className={clsx("text-lg")} key={link.path}>
+              <li className={clsx("text-lg ")} key={link.path}>
                 <Link href={link.path}>
-                  {link.icon ? <img className="h-6 w-6" src={link.icon} /> : <a>{link.name}</a>}
+                  {link.icon ? <img className="h-6 w-6" src={link.icon} /> : <a className={clsx("transition-colors", isActive ? "text-gray-900 border-neutral-900" : "text-gray-500 border-transparent hover:border-gray-900 hover:text-gray-900")}>{link.name}</a>}
                 </Link>
               </li>
             )

@@ -20,7 +20,7 @@ export default function Home({
                   <span className='block mb-1 font-semibold text-lg'>{product.title}</span>
                   <span className="text-neutral-700">{product.excerpt}</span>
                 </div>
-                <Image src={product.coverimage.url} alt={product.coverimage.alt || undefined} layout="fill" objectFit='cover' />
+                <Image placeholder='blur' src={product.coverimage.url} blurDataURL={product.coverimage.blurUpThumb || undefined} alt={product.coverimage.alt || undefined} layout="fill" objectFit='cover' />
               </div>
             </a>
           </Link>
@@ -31,18 +31,19 @@ export default function Home({
 }
 
 const QUERY = gql`
-query ProductHome {
-  allProducts {
-    id
-    excerpt
-    title
-    slug
-    coverimage {
-      url
-      alt
+  query ProductHome {
+    allProducts {
+      id
+      excerpt
+      title
+      slug
+      coverimage {
+        url
+        blurUpThumb
+        alt
+      }
     }
   }
-}
 `
 
 export async function getStaticProps() {

@@ -2,37 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Overpass', sans-serif;
-}
-
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-
-li {
-  /* list-style:circle ; */
-}
-
-
-/* .main-container {
-  display: flex;
-  flex-direction: column;
-  width: 66%;
-  margin: auto;
-} */
-
-.hidden { 
-  display: none; 
-}
-

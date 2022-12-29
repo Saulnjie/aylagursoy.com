@@ -10,17 +10,17 @@ export default function Product({ product }: InferGetServerSidePropsType<typeof 
     <Container >
       <div className="grid lg:grid-cols-5 gap-8 relative ">
         <div className="col-span-3 grid gap-8 order-2 lg:order-1">
-          {product.images.map((image) => {
+          {[product.coverimage, ...product.images].map((image) => {
             return (
               <div className="relative w-full h-full">
-                <Image className="object-cover" src={image.url} layout="responsive" alt={image.alt || undefined} height="100%" width="100%" />
+                <Image className="object-cover" placeholder="blur" src={image.url} blurDataURL={image.blurUpThumb || undefined} layout="responsive" alt={image.alt || undefined} height="100%" width="100%" />
               </div>
             )
           })}
         </div>
         <div className="col-span-2 lg:top-28 lg:sticky h-max order-1">
           <span className="text-4xl leading-tight lg:-mt-2.5 font-semibold block mb-4">{product.title}</span>
-          <div dangerouslySetInnerHTML={{ __html: product.description }} className="text-lg prose text-zinc-800 leading-relaxed" />
+          <div dangerouslySetInnerHTML={{ __html: product.description }} className="text-lg prose text-zinc-700 leading-relaxed" />
           <div className="mt-8">
             {product.purchaseLocations.length === 0 ? <span className="text-neutral-600">Not yet available for purchase</span> : (
               <ul>
@@ -51,13 +51,16 @@ const PRODUCT_BY_SLUG_QUERY = gql`
       purchaseLocations
       excerpt
       coverimage {
+        id
         url
         alt
+        blurUpThumb
       }
       images {
         url
         alt
         id
+        blurUpThumb
       }
     }
   }
